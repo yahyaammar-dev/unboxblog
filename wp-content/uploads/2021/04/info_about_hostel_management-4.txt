@@ -1,0 +1,20 @@
+Color pallete:
+
+dark yellow : #fab73d
+light yellow: #fddca5
+light grey: #bbc8ba
+green: #fddca5
+dark green: #2b331f
+
+Mainly use dark green and yellow as primary colors
+Then use Light Green and Light Yellow for backgrounds 
+
+
+Fonts:
+Roboto
+
+Database:
+table 1:
+id email  password  security jan feb mar april may jun jul aug sep oct nov dec 
+table 2:
+email password 

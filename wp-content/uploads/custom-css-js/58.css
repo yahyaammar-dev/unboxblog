@@ -1,0 +1,21 @@
+<!-- start Simple Custom CSS and JS -->
+<style type="text/css">
+.ez-toc-title{
+	font-family: Poppins,Arial, Helvetica, sans-serif !important;
+	margin: 0 0 20px;
+	line-height: 1;
+	font-size: 14px;
+}
+.ez-toc-title-container{
+	margin-bottom: 1rem;
+}
+.ez-toc-link{
+  font-family: Poppins,Arial, Helvetica, sans-serif !important;
+	margin: 0 0 20px;
+	line-height: 1;
+	font-size: 14px;
+}
+.comment-form-comment label{
+    display: none !important;
+  }</style>
+<!-- end Simple Custom CSS and JS -->
