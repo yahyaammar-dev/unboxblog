@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,OAAO,EAAE,aAAa;CACzB;;AAED,AAAA,qBAAqB,CAAC;EAClB,gBAAgB,EAAE,OAAO;CAC5B",
+    "sources": [
+        "../../wp-content/plugins/redux-framework/redux-core/inc/fields/date/redux-date.scss"
+    ],
+    "names": [],
+    "file": "redux-date.css"
+}
