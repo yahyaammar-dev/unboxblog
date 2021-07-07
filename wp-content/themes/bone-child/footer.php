@@ -57,7 +57,7 @@
 				<div class="container">
 					<div class="siteFooter-bottom-inner clearfix">
 						<div class="siteFooter-copyright u-floatLeft metaFont">
-							<?php echo md_bone_get_option('copyright-text','<a href="http://minimaldog.net">minimaldog</a>'); ?>
+							<?php echo md_bone_get_option('copyright-text','UNBOXING PAKISTAN'); ?>
 						</div>
 						<div class="siteFooter-backTop u-floatRight">
 							<!-- Back top button -->
