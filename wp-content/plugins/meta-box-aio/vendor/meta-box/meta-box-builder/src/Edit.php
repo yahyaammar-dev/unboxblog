@@ -3,13 +3,15 @@ namespace MBB;
 
 use MBBParser\Parsers\Base as BaseParser;
 use MBBParser\Parsers\MetaBox as Parser;
+use MetaBox\Support\Data as DataHelper;
+use MBB\Helpers\Data;
 
 class Edit extends BaseEditPage {
 	public function enqueue() {
 		wp_enqueue_style( 'mbb-app', MBB_URL . 'assets/css/style.css', ['wp-components'] );
 
 		wp_enqueue_code_editor( ['type' => 'application/x-httpd-php'] );
-		wp_enqueue_script( 'mbb-app', MBB_URL . 'assets/js/app.js', ['wp-element', 'wp-components', 'wp-i18n', 'clipboard', 'wp-color-picker'], MBB_VER, true );
+		wp_enqueue_script( 'mbb-app', MBB_URL . 'assets/js/app.js', ['jquery', 'wp-element', 'wp-components', 'wp-i18n', 'clipboard', 'wp-color-picker'], MBB_VER, true );
 
 		$data = [
 			'fields'        => get_post_meta( get_the_ID(), 'fields', true ),
@@ -19,27 +21,27 @@ class Edit extends BaseEditPage {
 			'rest'          => untrailingslashit( rest_url() ),
 			'nonce'         => wp_create_nonce( 'wp_rest' ),
 
-			'postTypes'     => Helpers\Data::get_post_types(),
-			'taxonomies'    => Helpers\Data::get_taxonomies(),
-			'settingsPages' => Helpers\Data::get_setting_pages(),
-			'templates'     => Helpers\Data::get_templates(),
-			'icons'         => Helpers\Data::get_dashicons(),
+			'postTypes'     => Data::get_post_types(),
+			'taxonomies'    => Data::get_taxonomies(),
+			'settingsPages' => Data::get_setting_pages(),
+			'templates'     => Data::get_templates(),
+			'icons'         => DataHelper::get_dashicons(),
 
 			// Extensions check.
 			'extensions' => [
-				'blocks'             => Helpers\Data::is_extension_active( 'mb-blocks' ),
-				'columns'            => Helpers\Data::is_extension_active( 'meta-box-columns' ),
-				'commentMeta'        => Helpers\Data::is_extension_active( 'mb-comment-meta' ),
-				'conditionalLogic'   => Helpers\Data::is_extension_active( 'meta-box-conditional-logic' ),
-				'customTable'        => Helpers\Data::is_extension_active( 'mb-custom-table' ),
-				'frontendSubmission' => Helpers\Data::is_extension_active( 'mb-frontend-submission' ),
-				'group'              => Helpers\Data::is_extension_active( 'meta-box-group' ),
-				'includeExclude'     => Helpers\Data::is_extension_active( 'meta-box-include-exclude' ),
-				'settingsPage'       => Helpers\Data::is_extension_active( 'mb-settings-page' ),
-				'showHide'           => Helpers\Data::is_extension_active( 'meta-box-show-hide' ),
-				'tabs'               => Helpers\Data::is_extension_active( 'meta-box-tabs' ),
-				'termMeta'           => Helpers\Data::is_extension_active( 'mb-term-meta' ),
-				'userMeta'           => Helpers\Data::is_extension_active( 'mb-user-meta' ),
+				'blocks'             => Data::is_extension_active( 'mb-blocks' ),
+				'columns'            => Data::is_extension_active( 'meta-box-columns' ),
+				'commentMeta'        => Data::is_extension_active( 'mb-comment-meta' ),
+				'conditionalLogic'   => Data::is_extension_active( 'meta-box-conditional-logic' ),
+				'customTable'        => Data::is_extension_active( 'mb-custom-table' ),
+				'frontendSubmission' => Data::is_extension_active( 'mb-frontend-submission' ),
+				'group'              => Data::is_extension_active( 'meta-box-group' ),
+				'includeExclude'     => Data::is_extension_active( 'meta-box-include-exclude' ),
+				'settingsPage'       => Data::is_extension_active( 'mb-settings-page' ),
+				'showHide'           => Data::is_extension_active( 'meta-box-show-hide' ),
+				'tabs'               => Data::is_extension_active( 'meta-box-tabs' ),
+				'termMeta'           => Data::is_extension_active( 'mb-term-meta' ),
+				'userMeta'           => Data::is_extension_active( 'mb-user-meta' ),
 			]
 		];
 

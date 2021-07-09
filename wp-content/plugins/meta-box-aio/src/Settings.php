@@ -214,6 +214,11 @@ class Settings {
 	private function get_extensions() {
 		$extensions = array(
 			array(
+				'slug'  => 'mb-acf-migration',
+				'title' => 'MB ACF Migration',
+				'desc'  => __( 'Migrate field groups and custom fields from Advanced Custom Fields to Meta Box', 'meta-box-aio' ),
+			),
+			array(
 				'slug'  => 'mb-admin-columns',
 				'title' => 'MB Admin Columns',
 				'desc'  => __( 'Display custom fields in table columns in admin screens for All Posts (types).', 'meta-box-aio' ),

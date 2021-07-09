@@ -21,6 +21,8 @@ class ComposerStaticInit4c4c1e383108d0c55aae2c9108bf70e6
         array (
             'MetaBox\\Support\\' => 16,
             'MetaBox\\Dependencies\\' => 21,
+            'MetaBox\\Columns\\' => 16,
+            'MetaBox\\ACF\\' => 12,
             'MBViews\\' => 8,
             'MBUP\\' => 5,
             'MBUM\\' => 5,
@@ -58,6 +60,14 @@ class ComposerStaticInit4c4c1e383108d0c55aae2c9108bf70e6
         array (
             0 => __DIR__ . '/..' . '/meta-box/mb-views/dependencies',
             1 => __DIR__ . '/..' . '/meta-box/meta-box-builder/dependencies',
+        ),
+        'MetaBox\\Columns\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/meta-box/meta-box-columns/src',
+        ),
+        'MetaBox\\ACF\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/meta-box/mb-acf-migration/src',
         ),
         'MBViews\\' => 
         array (

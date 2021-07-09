@@ -1,359 +1,309 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Retina 2x\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-02 11:53+0900\n"
-"PO-Revision-Date: 2013-08-02 11:54+0900\n"
-"Last-Translator: Jordy Meow <work@meow.fr>\n"
-"Language-Team: Jordy Meow <work@meow.fr>\n"
-"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Perfect Images + Retina (Pro)\n"
+"POT-Creation-Date: 2021-06-01 19:10+0200\n"
+"PO-Revision-Date: 2021-06-01 19:11+0200\n"
+"Language-Team: Kolja Spyra <webmaster@ntw-ks.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: _e;__\n"
-"X-Poedit-Basepath: ../\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 2.4.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wp-retina-2x-pro.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: Kolja Spyra <webmaster@ntw-ks.de>\n"
+"Language: de_DE\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: wr2x_ajax.php:39
-msgid "Done. Please <a href='javascript:history.go(0)'>refresh</a> this page."
-msgstr ""
-"Erledigt. Bitte <a href='javascript:history.go(0)'>lade die Seite neu</a>"
-
-#: wr2x_ajax.php:42
-msgid ""
-"Done. You might want to <a href='?page=wp-"
-"retina-2x&view=issues&refresh=true'>refresh</a> the issues."
-msgstr ""
-"Erledigt.  Du solltest die Meldungen <a href='?page=wp-"
-"retina-2x&view=issues&refresh=true'>neu laden</a>."
-
-#: wr2x_ajax.php:52 wr2x_ajax.php:103
-msgid "Please wait..."
-msgstr "Bitte warten…"
-
-#: wr2x_ajax.php:60
-msgid "Nothing to do ;)"
-msgstr "Es gibt nichts zu tun ;-)"
-
-#: wr2x_ajax.php:110 wr2x_retina-dashboard.php:247
-msgid "GENERATE"
-msgstr "Generieren"
-
-#: wr2x_ajax.php:258 wr2x_ajax.php:287
-msgid "The attachment ID is missing."
-msgstr ""
-
-#: wr2x_ajax.php:275
-msgid "Retina files deleted."
-msgstr "Retina Dateien gelöscht."
-
-#: wr2x_ajax.php:305
-msgid "Retina files generated."
-msgstr "Retina Dateien erstellt."
-
-#: wr2x_ajax.php:316
-msgid "You do not have permission to upload files."
-msgstr "Du hast keine Berechtigung um Dateien hochzuladen."
-
-#: wr2x_ajax.php:332
-#, fuzzy
-msgid "You don't have the rights to use a temporary directory."
-msgstr "Du hast keine Berechtigung um Dateien hochzuladen."
-
-#: wr2x_ajax.php:337
-msgid "The temporary directory could not be created."
-msgstr ""
-
-#: wr2x_ajax.php:352
-msgid "The file is not an image or the upload went wrong."
-msgstr ""
-"Das Hochladen ist fehlgeschlagen. Womöglich ist die ausgewählte Datei kein "
-"Bild."
-
-#: wr2x_ajax.php:362
-msgid "You cannot use this file (wrong extension? wrong type?)."
-msgstr "Du kannst diese Datei nicht hochladen (falscher Dateityp?)."
-
-#: wr2x_ajax.php:411
-msgid "Replaced successfully."
-msgstr "Ersetzen erfolgreich."
-
-#: wr2x_retina-dashboard.php:19
-msgid "Retina images"
-msgstr "Retina Bilder"
-
-#: wr2x_retina-dashboard.php:20
-#, php-format
-msgid "Retina %s"
-msgstr "Retina %s"
-
-#: wr2x_retina-dashboard.php:132
+#: app/js/i18n.js:7
 msgid "Generate"
 msgstr "Generieren"
 
-#: wr2x_retina-dashboard.php:146
-msgid "Delete all @2x"
-msgstr "Alle (@2x) Dateien löschen."
+#: app/js/i18n.js:11 common/admin.php:129 common/admin.php:130
+msgid "Dashboard"
+msgstr "Dashboard"
 
-#: wr2x_retina-dashboard.php:149
-msgid "Refresh issues"
-msgstr "Neu Laden."
+#: app/js/i18n.js:12
+msgid "Pending"
+msgstr "Ausstehend"
 
-#: wr2x_retina-dashboard.php:159
-msgid "Issues has been refreshed."
-msgstr "Alle Problemmeldungen wurden neu geladen."
+#: app/js/i18n.js:13
+msgid "Renamed"
+msgstr "Umbenannt"
 
-#: wr2x_retina-dashboard.php:164
-msgid ""
-"This screen allows you to check the media for which the retina files are "
-"missing. You can then create the files independently for each media or for "
-"all of them. You can also upload and replace the images by drag & drop them "
-"on the grid."
-msgstr ""
-"Diese Ansicht erlaubt es dir zu sehen für welche Bilder Retina Versionen "
-"fehlen. Du kannst diese für jedes Bild einzeln oder für alle gleichzeitig "
-"erstellen. Du kannst auch per drag & drop Bilder hochladen und ersetzen."
-
-#: wr2x_retina-dashboard.php:179
+#: app/js/i18n.js:14
 msgid "All"
 msgstr "Alle"
 
-#: wr2x_retina-dashboard.php:180
-msgid "Issues"
-msgstr "Probleme"
+#: app/js/i18n.js:15
+msgid "Thumb"
+msgstr "Vorschaubild"
 
-#: wr2x_retina-dashboard.php:181
-msgid "Ignored"
-msgstr "Ignorieren"
+#: app/js/i18n.js:16
+msgid "Replace / Title / Size"
+msgstr "Ersetzen / Titel / Größe"
 
-#: wr2x_retina-dashboard.php:187
-msgid "Title"
-msgstr "Titel"
+#: app/js/i18n.js:17
+msgid "Attached To"
+msgstr "Angefügt an"
 
-#: wr2x_retina-dashboard.php:195
-msgid "Actions"
-msgstr "Aktionen"
+#: app/js/i18n.js:18
+msgid "Filename"
+msgstr "Dateiname"
 
-#: wr2x_retina-dashboard.php:250
-msgid "IGNORE"
-msgstr "Ingorieren"
-
-#: wr2x_settings.php:18 wr2x_settings.php:21
-msgid "Current method:"
-msgstr "Derzeitige Methode:"
-
-#: wr2x_settings.php:18 wr2x_settings.php:106
-msgid "Client side"
-msgstr "Benutzerseitig"
-
-#: wr2x_settings.php:21 wr2x_settings.php:107
-msgid "Server side"
-msgstr "Serverseitig"
-
-#: wr2x_settings.php:26
+#: classes/admin.php:75
 msgid ""
-"By the way, you are using a <b>WordPress Multi-Site installation</b>! You "
-"must edit your .htaccess manually and add '<b>RewriteRule ^files/(.+) wp-"
-"content/plugins/wp-retina-2x/wr2x_image.php?ms=true&file=$1 [L]</b>' as the "
-"first RewriteRule if you want the server-side to work."
+"JetPack's <b>Photon</b> module breaks features built in WP Retina 2x (as "
+"Photos moves the files away). A common and better alternative to Photon is "
+"to use <a href='http://tracking.maxcdn.com/c/97349/3982/378'>MaxCDN</a> "
+"(very popular), CloudFlare or Fastly."
 msgstr ""
-"Du nutzt eine <b> WordPress Multi-Site Installation</b>! Du musst deine ."
-"htaccess Datei manuell editieren und diesen Code als erste Regel einfügen, "
-"wenn du Serverseitig arbeiten willst:\"<b>RewriteRule ^files/(.+) wp-content/"
-"plugins/wp-retina-2x/wr2x_image.php?ms=true&file=$1 [L]</b>\""
+"JetPacks <b>Photon-Modul</b> bricht Funktionen, die in WP Retina 2x "
+"eingebaut sind (wenn Fotos die Dateien wegbewegt). Eine häufige und bessere "
+"Alternative zu Photon ist <a href='http://tracking.maxcdn.com/"
+"c/97349/3982/378'>maxCDN</a> (sehr beliebt), CloudFlare oder Fastly zu "
+"verwenden."
 
-#: wr2x_settings.php:29
-#, fuzzy
+#: classes/admin.php:121 classes/dashboard.php:14
+msgid "Perfect Images"
+msgstr "Perfekte Bilder"
+
+#: classes/core.php:572
+msgid "N/A"
+msgstr "n. a."
+
+#: classes/core.php:643
+msgid "PRO VERSION ONLY"
+msgstr "NUR PRO VERSION"
+
+#: classes/core.php:682
 msgid ""
-"By the way, you are using a <b>WordPress Multi-Site installation</b>! You "
-"must edit your .htaccess manually and add '<b>RewriteRule ^(wp-content/.+\\."
-"(png|gif|jpg|jpeg|bmp|PNG|GIF|JPG|JPEG|BMP)) wp-content/plugins/wp-retina-2x/"
-"wr2x_image.php?ms=true&file=$1 [L]</b>' as the first RewriteRule if you want "
-"the server-side to work."
+"The metadata is broken! This is not related to the retina plugin. You should "
+"probably use a plugin to re-generate the missing metadata and images."
 msgstr ""
-"Du nutzt eine <b> WordPress Multi-Site Installation</b>! Du musst deine ."
-"htaccess Datei manuell editieren und diesen Code als erste Regel einfügen, "
-"wenn du Serverseitig arbeiten willst:\"<b>RewriteRule ^files/(.+) wp-content/"
-"plugins/wp-retina-2x/wr2x_image.php?ms=true&file=$1 [L]</b>\""
+"Die Metadaten sind defekt! Dies hängt nicht mit dem Retina-Plugin zusammen. "
+"Sie sollten wahrscheinlich ein Plugin verwenden, um die fehlenden Metadaten "
+"und Bilder neu zu generieren."
 
-#: wr2x_settings.php:33
+#: classes/core.php:686
+#, php-format
 msgid ""
-"The permalinks are not enabled. They need to be enabled in order to use the "
-"server-side method."
+"The image size '%s' could not be found. You probably changed your image "
+"sizes but this specific image was not re-build. This is not related to the "
+"retina plugin. You should probably use a plugin to re-generate the missing "
+"metadata and images."
 msgstr ""
-"Permalinks sind nicht aktiviert. Permalinks müssen aktiviert sein um "
-"Serverseitig arbeiten zu können."
+"Die Bildgröße '%s' konnte nicht gefunden werden. Sie haben wahrscheinlich "
+"Ihre Bildgrößen geändert, aber dieses bestimmte Bild wurde nicht neu "
+"erstellt. Dies hängt nicht mit dem Retina-Plugin zusammen. Sie sollten "
+"wahrscheinlich ein Plugin verwenden, um die fehlenden Metadaten und Bilder "
+"neu zu generieren."
 
-#: wr2x_settings.php:62
-msgid "Basics"
-msgstr "Grundlagen"
-
-#: wr2x_settings.php:66
-msgid "Advanced"
-msgstr "Erweitert"
-
-#: wr2x_settings.php:79
-msgid "Disabled Sizes"
-msgstr "Unbrauchbare Größen."
-
-#: wr2x_settings.php:80
-msgid "The checked sizes will not be generated for Retina displays."
-msgstr "Die ausgewählten Größen werden nicht für Retina Bildschirme generiert."
-
-#: wr2x_settings.php:86
-msgid "Auto Generate"
-msgstr "Automatisch erstellen."
-
-#: wr2x_settings.php:87
+#: classes/core.php:704
+#, php-format
 msgid ""
-"Generate Retina images automatically when images are uploaded to the Media "
-"Library."
+"The retina version of the Full-Size image is missing.<br />Full Size Retina "
+"has been checked in the Settings and this image is therefore required.<br /"
+">Please drag & drop an image of at least <b>%dx%d</b> in the <b>Full-Size "
+"Retina Upload</b> column."
 msgstr ""
-"Retina Dateien automatisch erstellen wenn Bilder in die Mediathek "
-"hochgeladen werden."
+"Die Retina-Version des Full-Size-Bildes fehlt.<br />Die Netzhaut in voller "
+"Größe wurde in den Einstellungen überprüft und dieses Bild ist daher "
+"erforderlich.<br />Bitte ziehen & ablegen Sie ein Bild von mindestens <b> %d "
+"x %d </b> in der Spalte Retina Upload in <b>voller Größe.</b>"
 
-#: wr2x_settings.php:95
-msgid "Method"
-msgstr "Methode"
-
-#: wr2x_settings.php:97
-#, fuzzy
+#: classes/core.php:708
+#, php-format
 msgid ""
-"<br />\n"
-"                \t\tThe <b>HTML Rewrite method</b> is probably the best, "
-"especially when used with Cloudflare or Google PageSpeed Service! You cannot "
-"use a basic HTML caching plugin with it (or you have to hack the options "
-"properly). <br /><br />\n"
-"                \t\tThe <b>Server-side method</b> is very fast and "
-"efficient. However, depending on the hosting and cache system you are using "
-"(including services like Cloudflare) you might encounter issues.<br /><br /"
-">\n"
-"                \t\tThe <b>Client-side method</b> is fail-safe and only uses "
-"a JavaScript file. When a Retina Display is detected, requests for every "
-"images on the page will be sent to the server and a high resolution image "
-"will be retrieved if available. It requires more bandwidth.\n"
-"                \t"
+"The Full-Size image is too small (<b>%dx%d</b>) and this size cannot be "
+"generated.<br />Please upload an image of at least <b>%dx%d</b>."
 msgstr ""
-"<br />Die<b>Serverseitige Methode</b> ist sehr schnell und effizient. Jedoch "
-"können abhängig von dem Hosting und Nachhing System welches sie benutzen "
-"(insbesondere Dienstleistungen wie z.B. Cloudflare.) Fehler auftreten.<br /"
-"><br />Die <b>Nutzerseitige Methode</b> ist Fehlersicher und nutzt nur "
-"JavaScript Dateien. Wenn ein Retina Bildschirm erkannt wird, werden alle "
-"Anfragen zu Bilddateien auf eine hohe Auflösung weitergeleitet (wenn "
-"verfügbar). Die meisten Webseiten nutzen diese Methode."
+"Das Bild in voller Größe ist zu klein (<b> %d x %d </b>) und diese Größe "
+"kann nicht generiert werden.<br />Bitte laden Sie ein Bild von mindestens "
+"<b> %d x %d </b>hoch."
 
-#: wr2x_settings.php:105
-msgid "HTML Rewrite"
-msgstr "HTML Rewrite"
-
-#: wr2x_settings.php:108
-msgid "None"
+#: classes/core.php:718
+msgid "The retina image can be created. Please use the 'GENERATE' button."
 msgstr ""
+"Das Retinabild kann erstellt werden. Bitte verwenden Sie die Schaltfläche "
+"'Generieren'."
 
-#: wr2x_settings.php:113
-msgid "Quality"
-msgstr "Qualität"
-
-#: wr2x_settings.php:114
-msgid "Image Compression quality (between 0 and 100)."
+#: classes/core.php:723
+msgid "The standard image normally created by WordPress is missing."
 msgstr ""
+"Das Standardbild, das normalerweise von WordPress erstellt wird, fehlt."
 
-#: wr2x_settings.php:120
-msgid "Debug Mode"
-msgstr "Debug Modus"
+#: classes/core.php:728
+msgid "This size is ignored by your retina settings."
+msgstr "Diese Größe wird von Ihren Retina-Einstellungen ignoriert."
 
-#: wr2x_settings.php:121
+#: classes/dashboard.php:15
+#, php-format
+msgid "Perfect Images %s"
+msgstr "Perfekte Bilder %s"
+
+#: classes/rest.php:319 premium/rest.php:43 premium/rest.php:119
+msgid "You do not have permission to upload files."
+msgstr "Sie haben keine Berechtigung zum Dateiupload."
+
+#: common/admin.php:68
+#, php-format
+msgid "<a href=\"admin.php?page=%s_settings\">Settings</a>"
+msgstr "<a href=\"admin.php?page=%s_settings\">Einstellungen</a>"
+
+#: common/admin.php:71
+msgid "Pro Version"
+msgstr "Pro Version"
+
+#: common/admin.php:72
+msgid "License Issue"
+msgstr "Lizenz"
+
+#: common/admin.php:72
 msgid ""
-"If checked, the client will be always served Retina images. Convenient for "
-"testing."
-msgstr "Wenn aktiviert werden immer Retina Dateien angezeigt. Zum Testen."
-
-#: wr2x_settings.php:127
-msgid "Hide 'Retina' column"
-msgstr "Retina Spalte nicht anzeigen."
-
-#: wr2x_settings.php:128
-msgid "Will hide the 'Retina Column' from the Media Library."
-msgstr "Versteckt die \"Retina Spalte\" in der Mediathek."
-
-#: wr2x_settings.php:134
-msgid "Hide Retina Dashboard"
-msgstr "Retina Dashboard verstecken."
-
-#: wr2x_settings.php:135
-msgid "Doesn't show the Retina Dashboard menu and tools."
-msgstr "Retina Dashboard und Werkzeuge nicht anzeigen."
-
-#: wr2x_settings.php:141
-#, fuzzy
-msgid "Ignore Mobile"
-msgstr "Ignorieren"
-
-#: wr2x_settings.php:142
-msgid "Doesn't deliver Retina images to mobiles."
+"<a target=\"_blank\" href=\"https://store.meowapps.com\">Get the <u>Pro "
+"Version</u></a>"
 msgstr ""
+"<a target=\"_blank\" href=\"https://store.meowapps.com\">Holen Sie sich die "
+"<u>Pro-Version</u></a>"
 
-#~ msgid "Titre"
-#~ msgstr "Titre"
+#: common/admin.php:103
+#, php-format
+msgid ""
+"<p>It looks like you are using the free version of the plugin (<b>%s</b>) "
+"but a license for the Pro version was also found. The Pro version might have "
+"been replaced by the Free version during an update (might be caused by a "
+"temporarily issue). If it is the case, <b>please download it again</b> from "
+"the <a target=\"_blank\" href=\"https://store.meowapps.com\">Meow Store</a>. "
+"If you wish to continue using the free version and clear this message, click "
+"on this button."
+msgstr ""
+"<p>Es sieht so aus, als ob Sie die kostenlose Version des Plugins ( ) "
+"verwenden, <b>%s</b> aber eine Lizenz für die Pro-Version wurde auch "
+"gefunden. Die Pro-Version wurde möglicherweise während eines Updates durch "
+"die Kostenlose Version ersetzt (möglicherweise durch ein vorübergehendes "
+"Problem verursacht). Wenn dies der Fall ist, <b>laden Sie es bitte erneut</"
+"b> aus dem <a target=\"_blank\" href=\"https://store.meowapps.com\">Meow "
+"Store</a>herunter. Wenn Sie die kostenlose Version weiterhin verwenden und "
+"diese Nachricht löschen möchten, klicken Sie auf diese Schaltfläche."
 
-#~ msgid ""
-#~ "Current method: <u>Server-side</u>.</span> Oh, and don't forget to check "
-#~ "the tutorial of this plugin on <a href='http://www.totorotimes.com/news/"
-#~ "retina-display-wordpress-plugin'>Totoro Times</a>."
-#~ msgstr ""
-#~ "Méthode sélectionnée: <u>Server-side</u>.</span> Oh, n'oubliez pas de "
-#~ "lire mon tutoriel sur ce plugin sur <a href='http://www.totorotimes.com/"
-#~ "news/retina-display-wordpress-plugin'>Totoro Times</a>."
+#: common/admin.php:109
+msgid "Remove the license"
+msgstr "Lizenz"
 
-#~ msgid "Done."
-#~ msgstr "Terminé."
+#: common/admin.php:138
+msgid ""
+"<label>Hide <b>Meow Apps</b> Menu</label><br /><small>Hide Meow Apps menu "
+"and all its components, for a cleaner admin. This option will be reset if a "
+"new Meow Apps plugin is installed. <b>Once activated, an option will be "
+"added in your General settings to display it again.</b></small>"
+msgstr ""
+"<label>Menü für <b>Meow Apps</b> ausblenden</label><br /><small>Versteckt "
+"das Meow Apps Menü und alle seine Komponenten, für eine sauberere "
+"Verwaltung. Diese Option wird zurückgesetzt, wenn ein neues Meow Apps Plugin "
+"installiert wird. <b>Nach der Aktivierung wird in den Allgemeinen "
+"Einstellungen eine Option hinzugefügt, um das Menü wieder anzuzeigen.</b></"
+"small>"
 
-#~ msgid "ERROR"
-#~ msgstr "ERREUR"
+#. translators: %1$s is the version of the interface; %2$s is a file path.
+#: common/admin.php:166
+#, php-format
+msgid ""
+"Thanks for using <a href=\"https://meowapps.com\">Meow Apps</a>! This is the "
+"Meow Admin %1$s <br /><i>Loaded from %2$s </i>"
+msgstr ""
+"Vielen Dank für die Verwendung von <a href=\"https://meowapps.com\">Meow "
+"Apps</a>! Dies ist der Meow Admin %1$s<br><i>Geladen von %2$s</i>"
 
-#~ msgid "Not created yet."
-#~ msgstr "Pas encore créé."
+#. translators: %1$s is a plugin nicename, %2$s is a short url (slug)
+#: common/classes/ratings.php:65
+#, php-format
+msgid ""
+"You have been using <b>%1$s</b> for some time now. Thank you! Could you "
+"kindly share your opinion with me, along with, maybe, features you would "
+"like to see implemented? Then, please <a style=\"font-weight: bold; color: "
+"#b926ff;\" target=\"_blank\" href=\"https://wordpress.org/support/plugin/"
+"%2$s/reviews/?rate=5#new-post\">write a little review</a>. That will also "
+"bring me joy and motivation! I will get back to you :)"
+msgstr ""
+"Sie verwenden es schon <b>%1$s</b> seit einiger Zeit. Vielen Dank! Könnten "
+"Sie ihre Meinung mit mir teilen, zusammen mit vielleicht Funktionen, die Sie "
+"gerne umgesetzt sehen möchten? Dann schreiben Sie bitte <a style=\"font-"
+"weight: bold; color: #b926ff;\" target=\"_blank\" href=\"https://wordpress."
+"org/support/plugin/%2$s/reviews/?rate=5#new-post\">eine kleine Rezension</"
+"a>. Das bringt mir auch Freude und Motivation! Ich werde mich :)"
 
-#~ msgid "Generate for all files"
-#~ msgstr "Générer tous les fichiers"
+#: common/classes/ratings.php:73
+msgid "Never remind me!"
+msgstr "Niemals"
 
-#~ msgid ""
-#~ "By the way, you are also using a <b>WordPress Network installation</b>. "
-#~ "The server-side might not work for you, so <b>please try the client-side "
-#~ "method instead</b>. If you really want to use this method, you will have "
-#~ "to work on your .htaccess manually."
-#~ msgstr ""
-#~ "Vous utilisez une version de WordPress <b>Multisite</b>. Il est possible "
-#~ "que la méthode côté serveur ne fonctionne pas, alors dans ce cas essayé "
-#~ "la méthode <b>côté client</b>. Si vous voulez vraiment utiliser cette "
-#~ "méthode, vous aurez peut-être besoin de bidouiller votre .htaccess "
-#~ "manuellement."
+#: common/classes/ratings.php:78
+msgid "Remind me in a few weeks..."
+msgstr "Erinnern Sie mich in ein paar Wochen..."
 
-#~ msgid ""
-#~ "This plugin supports and uses the <a href='http://wordpress.org/extend/"
-#~ "plugins/enable-media-replace/'>Enable Media Replace</a> plugin if "
-#~ "available. A 'Replace' button will appear in case your images are too "
-#~ "small. It is strongly recommended to install it."
-#~ msgstr ""
-#~ "WP Retina 2x peut automatiquement utiliser le plugin <a href='http://"
-#~ "wordpress.org/extend/plugins/enable-media-replace/'>Enable Media Replace</"
-#~ "a> si il est installé. Un bouton 'Réuploader' apparaîtra alors lorsque "
-#~ "l'image originale est trop petite."
+#: common/classes/ratings.php:83
+msgid "Yes, I did it!"
+msgstr "Hast"
 
-#~ msgid ""
-#~ "This plugin is actively developped and maintained by <a href='https://"
-#~ "plus.google.com/106075761239802324012'>Jordy Meow</a>.<br />Please visit "
-#~ "me at <a href='http://www.totorotimes.com'>Totoro Times</a>, a website "
-#~ "about Japan, photography and abandoned places.<br />And thanks for "
-#~ "linking us on <a href='https://www.facebook.com/totorotimes'>Facebook</a> "
-#~ "and <a href='https://plus.google.com/106832157268594698217'>Google+</a> :)"
-#~ msgstr ""
-#~ "Ce plugin est activement développé et maintenu par <a href='https://plus."
-#~ "google.com/106075761239802324012'>Jordy Meow</a>.<br />Merci de me "
-#~ "visiter sur <a href='http://www.totorotimes.fr'>Totoro Times</a>, un site "
-#~ "sur le Japan, la photographie et les endroits abandonnés.<br />Et merci "
-#~ "de nous adorer sur <a href='https://www.facebook.com/"
-#~ "totorotimes'>Facebook</a> et <a href='https://plus.google."
-#~ "com/106832157268594698217'>Google+</a> :)"
+#: common/classes/updater.php:228
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+"Es ist eine neue Version von %1$s verfügbar. %2$sDetails zu Version %3$s "
+"ansehen%4$s."
+
+#: common/classes/updater.php:236
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Es ist eine neue Version von %1$s verfügbar. %2$sDetails zu Version %3$s "
+"ansehen%4$s oder %5$sjetzt aktualisieren%6$s."
+
+#: common/classes/updater.php:493
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+"Du hast keine Berechtigung, um Aktualisierungen für Erweiterungen "
+"durchzuführen"
+
+#: common/classes/updater.php:493
+msgid "Error"
+msgstr "Fehler"
+
+#: premium/rest.php:125
+msgid "The file is not an image or the upload went wrong."
+msgstr "Die Datei ist kein Bild oder der Upload ist schief gelaufen."
+
+#: premium/rest.php:131
+msgid "You cannot use this file (wrong extension? wrong type?)."
+msgstr "Sie können diese Datei nicht hochladen (falscher Dateityp?)."
+
+#. Plugin Name of the plugin/theme
+msgid "Perfect Images + Retina (Pro)"
+msgstr "Dateien für hohe Auflösungen"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://meowapps.com"
+msgstr "https://woocommerce.com"
+
+#. Description of the plugin/theme
+msgid ""
+"Retina, Replace Images, Regenerate Thumbnails, Image Sizes Management, Image "
+"Threshold and more."
+msgstr ""
+"Retina, Bilder ersetzen, Miniaturansichten regenerieren, Verwaltung der "
+"Bildgrößen, Bildschwelle und mehr."
+
+#. Author of the plugin/theme
+msgid "Jordy Meow"
+msgstr "Jordy Meow"

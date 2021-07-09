@@ -2571,9 +2571,8 @@ function comment_form( $args = array(), $post_id = null ) {
 				 *                               username, email, and URL.
 				 * @param string $user_identity  If the commenter is a registered user,
 				 *                               the display name, blank otherwise.
-                echo apply_filters( 'comment_form_logged_in', $args['logged_in_as'], $commenter, $user_identity );
-
-                 */
+				 */
+				echo apply_filters( 'comment_form_logged_in', $args['logged_in_as'], $commenter, $user_identity );
 
 				/**
 				 * Fires after the is_user_logged_in() check in the comment form.

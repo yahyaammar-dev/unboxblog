@@ -95,6 +95,8 @@ class Widget extends \WP_Widget {
     {
         // Register the widget
         add_action('widgets_init', [$this, 'register']);
+        // Remove widget from Legacy Widget block
+        add_filter('widget_types_to_hide_from_legacy_widget_block', [$this, 'remove_from_legacy_widget_block']);
     }
 
     /**
@@ -143,21 +145,15 @@ class Widget extends \WP_Widget {
 
         // Has user set a title?
         if ( '' != $instance['title'] ) {
-            $title = apply_filters('widget_title', $instance['title'], $instance, $this->id_base);
-
-            if (
-                $instance['markup']['custom_html']
-                && $instance['markup']['title-start'] != ""
-                && $instance['markup']['title-end'] != ""
-            ) {
-                echo htmlspecialchars_decode($instance['markup']['title-start'], ENT_QUOTES) . $title . htmlspecialchars_decode($instance['markup']['title-end'], ENT_QUOTES);
-            } else {
-                echo $before_title . $title . $after_title;
+            if ( ! $instance['markup']['custom_html'] ) {
+                $instance['markup']['title-start'] = $before_title;
+                $instance['markup']['title-end'] = $after_title;
             }
         }
 
-        // Expose Widget ID for customization
+        // Expose Widget ID & base for customization
         $instance['widget_id'] = $widget_id;
+        $instance['id_base'] = $this->id_base;
 
         // Get posts
         if ( $this->admin_options['tools']['ajax'] && ! is_customize_preview() ) {
@@ -390,6 +386,7 @@ class Widget extends \WP_Widget {
     public function get_popular($instance = null)
     {
         if ( is_array($instance) && ! empty($instance) ) {
+
             // Return cached results
             if ( $this->admin_options['tools']['cache']['active'] ) {
 
@@ -446,5 +443,17 @@ class Widget extends \WP_Widget {
         }
 
         return null;
+    }
+
+    /**
+     * Removes the standard widget from the Legacy Widget block.
+     *
+     * @param   array
+     * @return  array
+     */
+    public function remove_from_legacy_widget_block($widget_types)
+    {
+        $widget_types[] = 'wpp';
+        return $widget_types;
     }
 }

@@ -5,6 +5,7 @@ use MBViews\Fields\ArrayRenderer;
 use MBViews\Fields\Choice\Renderer as ChoiceRenderer;
 use MBViews\Fields\TableRenderer;
 use MBViews\Fields\BaseRenderer;
+use MBViews\Fields\File\Renderer as FileRenderer;
 use MBViews\Fields\Image\Renderer as ImageRenderer;
 use MBViews\Fields\MapRenderer;
 use MBViews\Fields\Oembed\Renderer as OembedRenderer;
@@ -34,8 +35,10 @@ class MetaBox {
 
 	private function parse_group_value( $value, $field ) {
 		if ( $field['clone'] ) {
-			foreach ( $value as $k => $clone ) {
-				$value[ $k ] = $this->parse_group_clone_value( $clone, $field );
+			if ( is_array( $value ) ) {
+				foreach ( $value as $k => $clone ) {
+					$value[ $k ] = $this->parse_group_clone_value( $clone, $field );
+				}
 			}
 		} else {
 			$value = $this->parse_group_clone_value( $value, $field );
@@ -69,8 +72,8 @@ class MetaBox {
 		if ( in_array( $field['type'], ['fieldset_text', 'text_list'] ) ) {
 			$value = TableRenderer::parse( $value, $field );
 		}
-		if ( in_array( $field['type'], ['sidebar'] ) ) {
-			$value = BaseRenderer::parse( $value, $field );
+		if ( in_array( $field['type'], ['file', 'file_advanced', 'file_upload'] ) ) {
+			$value = FileRenderer::parse( $value, $field );
 		}
 		if ( in_array( $field['type'], ['image', 'image_advanced', 'image_upload', 'plupload_image', 'single_image'] ) ) {
 			$value = ImageRenderer::parse( $value, $field );
@@ -83,6 +86,12 @@ class MetaBox {
 		}
 		if ( in_array( $field['type'], ['post'] ) ) {
 			$value = PostRenderer::parse( $value, $field );
+		}
+		if ( in_array( $field['type'], ['sidebar'] ) ) {
+			$value = [
+				'id'       => $value,
+				'rendered' => BaseRenderer::parse( $value, $field ),
+			];
 		}
 		if ( in_array( $field['type'], ['taxonomy'] ) ) {
 			$value = TaxonomyRenderer::parse( $value, $field );

@@ -78,7 +78,7 @@ function processForm() {
 			removeLoading();
 			enableButtons();
 			displayMessage( response.data.message, response.success );
-			scrollTo( $form );
+			scrollTo( $( '.rwmb-confirmation' ) );
 
 			if ( response.success && response.data.redirect ) {
 				redirect( response.data.redirect );

@@ -1,11 +1,11 @@
-=== Perfect Images + Retina ===
+=== Perfect Images (Retina, Thumbnails, Replace) ===
 Contributors: TigrouMeow
 Tags: retina, images, replace, regenerate, sizes, lazysizes, high-dpi
 Donate link: https://commerce.coinbase.com/checkout/d047546a-77a8-41c8-9ea9-4a950f61832f
 Requires at least: 5.0
-Tested up to: 5.6
-Requires PHP: 5.6
-Stable tag: 6.1.2
+Tested up to: 5.7.2
+Requires PHP: 7.0
+Stable tag: 6.1.4
 
 Retina, Replace Images, Regenerate Thumbnails, Image Sizes Management, Image Threshold and more.
 
@@ -50,6 +50,15 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 3. Check if it works! - if it doesn't, read the FAQ, the tutorial, and check the forums.
 
 == Changelog ==
+
+= 6.1.4 (2021/07/06) =
+* Update: Lot of enhancements in the UI.
+* Info: If you are using Lightroom, please have a look at my plugin for synchronizing your Lightroom to WordPress: https://meowapps.com/wplr-sync/. And if you love my Retina plugin, please write a little review here: https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post. Thank you :)
+
+= 6.1.3 (2021/04/29) =
+* Fix: Little issue with some network sites.
+* Fix: Now use the default jpeg_quality set in WP.
+* Fix: The "Build Automatically" feature is now available even if no Retina Method is used.
 
 = 6.1.2 =
 * Fix: Avoid double slashes in the URLs of the scripts.
@@ -175,7 +184,6 @@ The plugin cannot inject CSS to handles the images added through CSS, that's bot
 * Fix: Disabled sizes weren't really disabled in the UI.
 * Fix: Notices about Ignore appearing in other screens.
 * Add: Handles incompatibility with JetPack's Photon.
-* Info: If you are using Lightroom, please have a look at my plugin for synchronizing your Lightroom to WordPress: https://meowapps.com/wplr-sync/. And if youi love my Retina plugin, please write a little review here: https://wordpress.org/support/plugin/wp-retina-2x/reviews/?rate=5#new-post. Thank you :)
 
 = 4.7.7 =
 * Add: The Generate button (and the bulk Generate) will now also Re-Generate the thumbnails as well (like the Renerate Thumbnails plugin). If you are interested in a option to disable this behavior, please say so in the WP forums.

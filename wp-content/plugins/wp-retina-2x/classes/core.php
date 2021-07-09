@@ -86,9 +86,7 @@ class Meow_WR2X_Core {
 		$wr2x_auto_generate = get_option( 'wr2x_auto_generate', null );
 		if ( is_null( $this->method ) ) {
 			update_option( 'wr2x_method', 'Responsive' );
-		}
-		if ( is_null( $this->method ) ) {
-			update_option( 'wr2x_auto_generate', '1' );
+			$this->method = 'Responsive';
 		}
 		if ( is_null( $wr2x_auto_generate ) ) {
 			update_option( 'wr2x_auto_generate', '1' );
@@ -799,7 +797,10 @@ class Meow_WR2X_Core {
 			$image->crop( $customCrop['x'] * $customCrop['scale'], $customCrop['y'] * $customCrop['scale'], $customCrop['w'] * $customCrop['scale'], $customCrop['h'] * $customCrop['scale'], $width, $height, false );
 
 		// Quality
-		$quality = get_option( 'wr2x_quality', 90 );
+		$quality = get_option( 'wr2x_quality' );
+		if ( empty( $quality ) ) {
+			$quality = apply_filters( 'jpeg_quality', 75 );
+		}
 		$image->set_quality( $quality );
 
 		$saved = $image->save( $cropped_img_path );
@@ -907,12 +908,24 @@ class Meow_WR2X_Core {
 	// http://wordpress.org/support/topic/cant-find-retina-file-with-custom-uploads-constant?replies=3#post-5078892
 	function get_pathinfo_from_image_src( $image_src ) {
 		$uploads_url = trailingslashit( $this->get_upload_root_url() );
-		if ( strpos( $image_src, $uploads_url ) === 0 )
+		if ( strpos( $image_src, $uploads_url ) === 0 ){
 			return ltrim( substr( $image_src, strlen( $uploads_url ) ), '/');
-		else if ( strpos( $image_src, wp_make_link_relative( $uploads_url ) ) === 0 )
+		}
+		else if ( strpos( $image_src, wp_make_link_relative( $uploads_url ) ) === 0 ){
 			return ltrim( substr( $image_src, strlen( wp_make_link_relative( $uploads_url ) ) ), '/');
+		}
 		$img_info = parse_url( $image_src );
-		return ltrim( $img_info['path'], '/' );
+		// The fix multisite is proposed by Emile 
+		// (https://secure.helpscout.net/conversation/1420887033/6577?folderId=1781329)
+		return ltrim( $this->fix_multisite($img_info['path']), '/' );
+	}
+
+	function fix_multisite( $path ){
+		if ( !is_multisite() ) {
+			return $path;
+		}
+		$current_blog = get_blog_details()->path;
+		return '/' . str_replace( $current_blog, '', $path );
 	}
 
 	// Rename this filename with CDN

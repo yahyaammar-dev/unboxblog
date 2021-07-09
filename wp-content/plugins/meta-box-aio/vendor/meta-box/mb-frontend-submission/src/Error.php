@@ -24,4 +24,7 @@ class Error {
 		<div class="rwmb-error"><?= wp_kses_post( $_SESSION[ self::$key ] ); ?></div>
 		<?php
 	}
+	public static function get() {
+		return wp_kses_post( $_SESSION[ self::$key ] );
+	}
 }

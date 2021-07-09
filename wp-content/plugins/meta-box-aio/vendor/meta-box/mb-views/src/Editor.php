@@ -44,7 +44,7 @@ class Editor {
 
 		$view_id = rwmb_request()->filter_get( 'post', FILTER_SANITIZE_NUMBER_INT );
 		if ( $view_id ) {
-			$shortcode    = '[mbv id="' . $view_id . '"]';
+			$shortcode    = '[mbv name="' . get_post( $view_id )->post_name . '"]';
 			$meta_boxes[] = [
 				'title'      => __( 'Shortcode', 'mb-views' ),
 				'id'         => 'mbv-shortcode',

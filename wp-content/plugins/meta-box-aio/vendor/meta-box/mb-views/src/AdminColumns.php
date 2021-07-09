@@ -74,7 +74,7 @@ class AdminColumns {
 	}
 
 	private function show_shortcode() {
-		$shortcode = '[mbv id="' . get_the_ID() . '"]';
+		$shortcode = '[mbv name="' . get_post()->post_name . '"]';
 		echo '<input type="text" readonly value="' . esc_attr( $shortcode ) . '" onclick="this.select()">';
 	}
 }

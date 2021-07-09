@@ -11,10 +11,20 @@ class Shortcode {
 	}
 
 	public function render( $atts ) {
-		$atts = array_merge( ['id' => null], $atts );
-		$id   = $atts['id'];
-		unset( $atts['id'] );
+		$atts = array_merge( [
+			'id'   => null,
+			'name' => '',
+		], $atts );
 
-		return $id ? $this->renderer->render( $id, $atts ) : '';
+		$key = null;
+		if ( ! empty( $atts['id'] ) ) {
+			$key = $atts['id'];
+			unset( $atts['id'] );
+		} elseif ( ! empty( $atts['name'] ) ) {
+			$key = $atts['name'];
+			unset( $atts['name'] );
+		}
+
+		return $key ? $this->renderer->render( $key, $atts ) : '';
 	}
 }

@@ -1,9 +1,8 @@
 <?php
 namespace MBBParser\Parsers;
 
-use MBBParser\Arr;
 use MBBParser\SettingsTrait;
-use RWMB_Helpers_Array;
+use MetaBox\Support\Arr;
 
 class Base {
 	use SettingsTrait;
@@ -20,18 +19,20 @@ class Base {
 	}
 
 	public function parse_boolean_values() {
-		array_walk_recursive( $this->settings, array( $this, 'convert_string_to_boolean' ) );
+		array_walk_recursive( $this->settings, [ $this, 'convert_string_to_boolean' ] );
 		return $this;
 	}
 
 	protected function convert_string_to_boolean( &$value ) {
-		if ( in_array( $value, array( 'true', 'false' ), true ) ) {
-			$value = filter_var( $value, FILTER_VALIDATE_BOOLEAN );
+		if ( $value === 'true' ) {
+			$value = true;
+		} elseif ( $value === 'false' ) {
+			$value = false;
 		}
 	}
 
 	public function parse_numeric_values() {
-		array_walk_recursive( $this->settings, array( $this, 'convert_string_to_number' ) );
+		array_walk_recursive( $this->settings, [ $this, 'convert_string_to_number' ] );
 		return $this;
 	}
 
@@ -39,7 +40,6 @@ class Base {
 	 * Ignore scientific number (123e45, etc..)
 	 */
 	protected function convert_string_to_number( &$value ) {
-		$value = (string) $value;
 		if ( is_numeric( $value ) && false === strpos( $value, 'e' ) ) {
 			$value = 0 + $value;
 		}
@@ -47,15 +47,17 @@ class Base {
 
 	protected function remove_empty_values() {
 		foreach ( $this->settings as $key => $value ) {
-			// Remove empty values in an array.
-			$value = is_array( $value ) ? array_filter( $value ) : $value;
+			// Remove empty string in an array.
+			$value = ! is_array( $value ) ? $value : array_filter( $value, function( $v ) {
+				return $v !== '';
+			} );
 
 			// Don't remove allowed empty keys.
 			if ( in_array( $key, $this->empty_keys ) ) {
 				continue;
 			}
 
-			if ( empty( $value ) ) {
+			if ( $value === '' || $value === [] ) {
 				unset( $this->settings[ $key ] );
 			}
 		}
@@ -76,8 +78,8 @@ class Base {
 		}
 
 		// Options aren't affected with taxonomies.
-		$tmp_array = array();
-		$tmp_std   = array();
+		$tmp_array = [];
+		$tmp_std   = [];
 
 		foreach ( $value as $arr ) {
 			$tmp_array[ $arr['key'] ] = $arr['value'];
@@ -97,7 +99,7 @@ class Base {
 		}
 
 		// Parse JSON and dot notations.
-		$this->{$key} = $this->parse_json_dot_notations( $tmp_array );
+		$this->$key = $this->parse_json_dot_notations( $tmp_array );
 
 		if ( $tmp_std ) {
 			$this->std = $tmp_std;
@@ -128,7 +130,11 @@ class Base {
 		foreach ( $data['when'] as &$condition ) {
 			// Allow to set array as CSV.
 			if ( false !== strpos( $condition['value'], ',' ) ) {
-				$condition['value'] = RWMB_Helpers_Array::from_csv( $condition['value'] );
+				$condition['value'] = Arr::from_csv( $condition['value'] );
+			}
+			if ( $condition['name'] === '' ) {
+				$condition = null;
+				continue;
 			}
 			$condition = [
 				$condition['name'],
@@ -136,6 +142,7 @@ class Base {
 				$condition['value'],
 			];
 		}
+		$data['when'] = array_filter( $data['when'] );
 
 		if ( ! empty( $data['when'] ) ) {
 			$this->{$data['type']} = array(

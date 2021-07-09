@@ -1,5 +1,34 @@
 == Changelog ==
 
+= 1.6.7.3 =
+- Changed: Renamed a misspelled `wpforms_display_sumbit_spinner_src` filter to `wpforms_display_submit_spinner_src`, old name is now deprecated.
+- Fixed: Expired transients are not deleted automatically.
+- Fixed: Entries count race condition under high load in the plugin Lite version.
+- Fixed: Form Builder product education links.
+
+= 1.6.7.2 =
+- Fixed: Admin notice option flag reference.
+
+= 1.6.7.1 =
+- Changed: Improved logic of pasting a text in the fields with word and character limits.
+- Changed: Updated DOMPurify lib to 2.2.9.
+- Changed: Some admin notices can be dismissed on a per-user basis.
+- Fixed: Smart Tags don't parse dot and comma symbols well.
+- Fixed: In rare cases, WPForms functions calls are not handled correctly inside the third-party frontend AJAX calls.
+- Fixed: Incorrect `wpforms_smart_tag_process` filter deprecation notice.
+- Fixed: Compatibility with the Elementor 3.1.x, 3.2.x and 3.3.x.
+
+= 1.6.7 =
+- Changed: Email Summaries can now be tweaked via the hook to have multiple "To" recipients.
+- Changed: Email Summaries subject line is changed to reduce a chance of going into spam folder.
+- Changed: Rewrote inline captcha scripts in vanilla JS to improve its compatibility with a third-party code.
+- Changed: Replaced jQuery.isFunction() (deprecated as of jQuery 3.3) usages with a recommended counterpart.
+- Changed: Refine smart tags system to improve extensibility.
+- Changed: Each addon title is linked to a related documentation on the Addons page.
+- Changed: Externally disabled fields are displayed inside the Form Builder as dismissible notices.
+- Changed: Updated DOMPurify lib to 2.2.8.
+- Fixed: Inconsistent Form Builder JS events loading order in jQuery 3+ across different browsers.
+
 = 1.6.6 =
 - Added: WordPress 5.7 new color scheme compatibility.
 - Changed: Allow using 0/false values in choices label for Checkboxes, Multiple Choice, Dropdown fields.
@@ -12,7 +41,7 @@
 - Fixed: Incorrect permission checks for different places in the dashboard and the Form Builder.
 - Fixed: RTL support for Name, Email fields.
 - Fixed: Speed up the Form Builder rendering by loading certain scripts only when the Embed functionality is triggered.
-- Fixed: The `iframe` HTML element was not rendered incorrectly in the Twenty Twenty theme.
+- Fixed: The `iframe` HTML element was rendered incorrectly in the Twenty Twenty theme.
 - Fixed: The Checkboxes and Multiple Choice fields CSS issues in Twenty Twenty-One theme.
 - Fixed: WPForms Challenge was drunk in the Firefox browser.
 - Fixed: reCAPTCHA doesn't render in a popup when the same form exists in another place.

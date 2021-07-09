@@ -6,19 +6,19 @@
     'aliases' => 
     array (
     ),
-    'reference' => '9057528dfbe637661e67267e2d1b8ea6353bc14d',
+    'reference' => 'ef3b777f1b378581118b44f884de5668bd09902a',
     'name' => 'meta-box/meta-box-aio',
   ),
   'versions' => 
   array (
     'composer/installers' => 
     array (
-      'pretty_version' => 'v1.10.0',
-      'version' => '1.10.0.0',
+      'pretty_version' => 'v1.11.0',
+      'version' => '1.11.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1a0357fccad9d1cc1ea0c9a05b8847fbccccb78d',
+      'reference' => 'ae03311f45dfe194412081526be2e003960df74b',
     ),
     'gamajo/template-loader' => 
     array (
@@ -28,6 +28,16 @@
       array (
       ),
       'reference' => 'fa92a37b780d945463f7fea328dce14933558752',
+    ),
+    'meta-box/mb-acf-migration' => 
+    array (
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
+      'aliases' => 
+      array (
+        0 => '9999999-dev',
+      ),
+      'reference' => '8594f4e9c6ee20aa69b98c9875b15f197ab7a00c',
     ),
     'meta-box/mb-admin-columns' => 
     array (
@@ -40,12 +50,12 @@
     ),
     'meta-box/mb-blocks' => 
     array (
-      'pretty_version' => '1.3.0',
-      'version' => '1.3.0.0',
+      'pretty_version' => '1.3.1',
+      'version' => '1.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b274d2e38c56337d580f89932ab09deb42bdde36',
+      'reference' => '21128e0f2504614caad3bf3cdbb89a04d85467dd',
     ),
     'meta-box/mb-custom-table' => 
     array (
@@ -58,12 +68,12 @@
     ),
     'meta-box/mb-frontend-submission' => 
     array (
-      'pretty_version' => '3.0.1',
-      'version' => '3.0.1.0',
+      'pretty_version' => '3.1.1',
+      'version' => '3.1.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '2b0b26e4c2f65ac75729fa12ce5cd8cc62eeee6e',
+      'reference' => 'f3b6447de4d1d58ee40c471d6ee78ab077d571de',
     ),
     'meta-box/mb-revision' => 
     array (
@@ -109,16 +119,16 @@
       'aliases' => 
       array (
       ),
-      'reference' => '6671e6a607f005c381223ac525d916afc379f634',
+      'reference' => 'b769c23976468744c736eee2590b96966625f2a2',
     ),
     'meta-box/mb-views' => 
     array (
-      'pretty_version' => '1.8.3',
-      'version' => '1.8.3.0',
+      'pretty_version' => '1.9.0',
+      'version' => '1.9.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'da4953099f1dc9c45eb54f4a1f474a610a0ab83e',
+      'reference' => '6e855b8a6b2f9232ab73a0813c3c926b74a03cf2',
     ),
     'meta-box/mbb-parser' => 
     array (
@@ -128,7 +138,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '3cbbb64cc12d37cd3d45c828983642d2ef4165f6',
+      'reference' => '5bc051263a062490d051d27ec184b32a91bb688f',
     ),
     'meta-box/meta-box-aio' => 
     array (
@@ -137,25 +147,25 @@
       'aliases' => 
       array (
       ),
-      'reference' => '9057528dfbe637661e67267e2d1b8ea6353bc14d',
+      'reference' => 'ef3b777f1b378581118b44f884de5668bd09902a',
     ),
     'meta-box/meta-box-builder' => 
     array (
-      'pretty_version' => '4.1.3',
-      'version' => '4.1.3.0',
+      'pretty_version' => '4.1.6',
+      'version' => '4.1.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'c94cad6840b0abdfc0c22ae81b54931d9c5e7336',
+      'reference' => '497ae15b8ca967a01aae8ff2dd9dd2af2191cb0a',
     ),
     'meta-box/meta-box-columns' => 
     array (
-      'pretty_version' => '1.2.7',
-      'version' => '1.2.7.0',
+      'pretty_version' => '1.2.13',
+      'version' => '1.2.13.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f424925e0f2a1c51c2a867ee43217195bb9c02ca',
+      'reference' => '97390be6616cba9d2ddde6b0767c64918e8c1dea',
     ),
     'meta-box/meta-box-conditional-logic' => 
     array (
@@ -229,7 +239,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '6d373254c0a12031083d0633c13532513c8fdccf',
+      'reference' => '32fd84f6e85ce39fb0c2f287f52042609cc33235',
     ),
     'meta-box/support' => 
     array (
@@ -239,7 +249,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '45e70aaeb76f95b0ebf48ec484435bf2a8e9019f',
+      'reference' => '7be71d73b2dd0e8d02b30e4d29a178096a3e0c99',
     ),
     'mustangostang/spyc' => 
     array (
@@ -294,21 +304,21 @@
     ),
     'wpmetabox/mb-custom-post-type' => 
     array (
-      'pretty_version' => '2.1.0',
-      'version' => '2.1.0.0',
+      'pretty_version' => '2.1.2',
+      'version' => '2.1.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b2daf8482d5f143cf2afeafbd81c8407e7566f22',
+      'reference' => '7688931621bff1813df44bfb55560e44a4a0cd8a',
     ),
     'wpmetabox/mb-elementor-integrator' => 
     array (
-      'pretty_version' => '2.0.6',
-      'version' => '2.0.6.0',
+      'pretty_version' => '2.0.7',
+      'version' => '2.0.7.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0f85c6304fbebe99be1141bcc8cd7b439df2f433',
+      'reference' => '3d22ada04e0581d1751e7b074a8f17eb95ee2f92',
     ),
     'wpmetabox/mb-relationships' => 
     array (
@@ -337,7 +347,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '4722a6f4698c6976725bb4ec44fb6ad51e7c0b55',
+      'reference' => '5a304d08d72780b946bfc71f97d106e167975744',
     ),
     'wpmetabox/meta-box-beaver-themer-integrator' => 
     array (
@@ -359,12 +369,12 @@
     ),
     'wpmetabox/text-limiter' => 
     array (
-      'pretty_version' => '1.1.2',
-      'version' => '1.1.2.0',
+      'pretty_version' => '1.1.3',
+      'version' => '1.1.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '0418747193e9bde665feaa9520b0712b13a58553',
+      'reference' => '5f82c5c5ae33b81672af4784eea3f92b71ca26d4',
     ),
   ),
 );

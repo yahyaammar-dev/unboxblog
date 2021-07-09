@@ -13,7 +13,7 @@ class Renderer {
 	/**
 	 * Render a view.
 	 *
-	 * @param int|obj $post Post object or ID.
+	 * @param WP_Post|int|string $view Post object, view ID or view name (slug).
 	 */
 	public function render( $view, $data = [] ) {
 		// ALlow developers to bypass the default renderer and use an alternative method like Timber.
@@ -21,7 +21,19 @@ class Renderer {
 			return apply_filters( 'mbv_render_output', '', $view, $data );
 		}
 
-		$view = get_post( $view );
+		// Get view by ID.
+		if ( is_numeric( $view ) ) {
+			$view = get_post( $view );
+		}
+		// Get view by slug.
+		elseif ( is_string( $view ) ) {
+			$view = get_page_by_path( $view, OBJECT, 'mb-views' );
+		}
+		// Else: view is a post object.
+
+		if ( empty( $view ) ) {
+			return '';
+		}
 
 		// Render the view with Twig.
 		$loader = new TwigLoader;

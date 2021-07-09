@@ -83,15 +83,6 @@ namespace WPForms {
 		public $process;
 
 		/**
-		 * The smart tags instance.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @var \WPForms_Smart_Tags
-		 */
-		public $smart_tags;
-
-		/**
 		 * The License class instance (Pro).
 		 *
 		 * @since 1.0.0
@@ -107,7 +98,7 @@ namespace WPForms {
 		 *
 		 * @var array
 		 */
-		private $registry = array();
+		private $registry = [];
 
 		/**
 		 * Paid returns true, free (Lite) returns false.
@@ -119,8 +110,8 @@ namespace WPForms {
 		public $pro = false;
 
 		/**
-		 * Backward compatibility method for accessing the class registry in an old way
-		 * e.g. 'wpforms()->form' or 'wpforms()->entry'
+		 * Backward compatibility method for accessing the class registry in an old way,
+		 * e.g. 'wpforms()->form' or 'wpforms()->entry'.
 		 *
 		 * @since 1.5.7
 		 *
@@ -129,6 +120,16 @@ namespace WPForms {
 		 * @return mixed|null
 		 */
 		public function __get( $name ) {
+
+			if ( $name === 'smart_tags' ) {
+				trigger_error( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_trigger_error
+					esc_html__(
+						"Property smart_tags was deprecated, use wpforms()->get( 'smart_tags' ) instead of wpforms()->smart_tags",
+						'wpforms-lite'
+					),
+					E_USER_DEPRECATED
+				);
+			}
 
 			return $this->get( $name );
 		}
@@ -146,11 +147,12 @@ namespace WPForms {
 		public static function instance() {
 
 			if (
-				null === self::$instance ||
+				self::$instance === null ||
 				! self::$instance instanceof self
 			) {
 
 				self::$instance = new self();
+
 				self::$instance->constants();
 				self::$instance->includes();
 
@@ -161,8 +163,8 @@ namespace WPForms {
 					require_once WPFORMS_PLUGIN_DIR . 'lite/wpforms-lite.php';
 				}
 
-				add_action( 'init', array( self::$instance, 'load_textdomain' ), 10 );
-				add_action( 'plugins_loaded', array( self::$instance, 'objects' ), 10 );
+				add_action( 'init', [ self::$instance, 'load_textdomain' ], 10 );
+				add_action( 'plugins_loaded', [ self::$instance, 'objects' ], 10 );
 			}
 
 			return self::$instance;
@@ -181,6 +183,7 @@ namespace WPForms {
 			// Plugin Slug - Determine plugin type and set slug accordingly.
 			if ( apply_filters( 'wpforms_allow_pro_version', file_exists( WPFORMS_PLUGIN_DIR . 'pro/wpforms-pro.php' ) ) ) {
 				$this->pro = true;
+
 				define( 'WPFORMS_PLUGIN_SLUG', 'wpforms' );
 			} else {
 				define( 'WPFORMS_PLUGIN_SLUG', 'wpforms-lite' );
@@ -228,7 +231,6 @@ namespace WPForms {
 			// TODO: class-providers.php should be loaded in admin area only.
 			require_once WPFORMS_PLUGIN_DIR . 'includes/class-providers.php';
 			require_once WPFORMS_PLUGIN_DIR . 'includes/class-process.php';
-			require_once WPFORMS_PLUGIN_DIR . 'includes/class-smart-tags.php';
 			require_once WPFORMS_PLUGIN_DIR . 'includes/class-widget.php';
 			require_once WPFORMS_PLUGIN_DIR . 'includes/class-conditional-logic-core.php';
 			require_once WPFORMS_PLUGIN_DIR . 'includes/emails/class-emails.php';
@@ -277,30 +279,30 @@ namespace WPForms {
 				/*
 				 * Load PHP 5.5 email subsystem.
 				 */
-				add_action( 'wpforms_loaded', array( '\WPForms\Emails\Summaries', 'get_instance' ) );
+				add_action( 'wpforms_loaded', [ '\WPForms\Emails\Summaries', 'get_instance' ] );
 			}
 
 			/*
 			 * Load admin components. Exclude from frontend.
 			 */
 			if ( is_admin() ) {
-				add_action( 'wpforms_loaded', array( '\WPForms\Admin\Loader', 'get_instance' ) );
+				add_action( 'wpforms_loaded', [ '\WPForms\Admin\Loader', 'get_instance' ] );
 			}
 
 			/*
 			 * Load form components.
 			 */
-			add_action( 'wpforms_loaded', array( '\WPForms\Forms\Loader', 'get_instance' ) );
+			add_action( 'wpforms_loaded', [ '\WPForms\Forms\Loader', 'get_instance' ] );
 
 			/*
 			 * Properly init the providers loader, that will handle all the related logic and further loading.
 			 */
-			add_action( 'wpforms_loaded', array( '\WPForms\Providers\Loader', 'get_instance' ) );
+			add_action( 'wpforms_loaded', [ '\WPForms\Providers\Loader', 'get_instance' ] );
 
 			/*
 			 * Properly init the integrations loader, that will handle all the related logic and further loading.
 			 */
-			add_action( 'wpforms_loaded', array( '\WPForms\Integrations\Loader', 'get_instance' ) );
+			add_action( 'wpforms_loaded', [ '\WPForms\Integrations\Loader', 'get_instance' ] );
 		}
 
 		/**
@@ -311,10 +313,9 @@ namespace WPForms {
 		public function objects() {
 
 			// Global objects.
-			$this->form       = new \WPForms_Form_Handler();
-			$this->frontend   = new \WPForms_Frontend();
-			$this->process    = new \WPForms_Process();
-			$this->smart_tags = new \WPForms_Smart_Tags();
+			$this->form     = new \WPForms_Form_Handler();
+			$this->frontend = new \WPForms_Frontend();
+			$this->process  = new \WPForms_Process();
 
 			// Hook now that all of the WPForms stuff is loaded.
 			do_action( 'wpforms_loaded' );
@@ -355,6 +356,7 @@ namespace WPForms {
 			$callback = function () use ( $full_name, $id, $run ) {
 
 				$instance = new $full_name();
+
 				if ( $id && ! array_key_exists( $id, $this->registry ) ) {
 					$this->registry[ $id ] = $instance;
 				}
@@ -419,7 +421,7 @@ namespace WPForms {
 
 			$tables = $wpdb->get_results( "SHOW TABLES LIKE '" . $wpdb->prefix . "wpforms_%'", 'ARRAY_N' ); // phpcs:ignore
 
-			return ! empty( $tables ) ? wp_list_pluck( $tables, 0 ) : array();
+			return ! empty( $tables ) ? wp_list_pluck( $tables, 0 ) : [];
 		}
 	}
 }
@@ -434,13 +436,14 @@ namespace {
 	 * @return WPForms\WPForms
 	 */
 	function wpforms() {
+
 		return WPForms\WPForms::instance();
 	}
 
 	/**
 	 * Adding an alias for backward-compatibility with plugins
-	 * that still use class_exists('WPForms')
-	 * instead of function_exists('wpforms'), which is preferred.
+	 * that still use class_exists( 'WPForms' )
+	 * instead of function_exists( 'wpforms' ), which is preferred.
 	 *
 	 * In 1.5.0 we removed support for PHP 5.2
 	 * and moved former WPForms class to a namespace: WPForms\WPForms.

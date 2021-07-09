@@ -3,7 +3,7 @@
  * Plugin Name: Meta Box Tooltip
  * Plugin URI:  https://metabox.io/plugins/meta-box-tooltip/
  * Description: Add tooltip for meta fields
- * Version:     1.1.4
+ * Version:     1.1.5
  * Author:      MetaBox.io
  * Author URI:  https://metabox.io
  * License:     GPL2+
@@ -136,7 +136,7 @@ if ( ! class_exists( 'MB_Tooltip' ) ) {
 				return $data;
 			}
 
-			$data = array_merge( $data, $tooltip );
+			$data = array_merge( $data, array_filter( $tooltip ) );
 
 			return $data;
 		}

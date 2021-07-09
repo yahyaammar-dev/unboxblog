@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Perfect Images + Retina
+Plugin Name: Perfect Images (Retina, Thumbnails, Replace)
 Plugin URI: https://meowapps.com
 Description: Retina, Replace Images, Regenerate Thumbnails, Image Sizes Management, Image Threshold and more.
-Version: 6.1.2
+Version: 6.1.4
 Author: Jordy Meow
 Author URI: https://meowapps.com
 Text Domain: wp-retina-2x
@@ -58,7 +58,7 @@ if ( !get_option( 'wr2x_notice_easyio' ) ) {
 		add_action( 'admin_notices', 'wr2x_easy_io_admin_notices' );
 }
 
-define( 'WR2X_VERSION', '6.1.2' );
+define( 'WR2X_VERSION', '6.1.4' );
 define( 'WR2X_PREFIX', 'wr2x' );
 define( 'WR2X_DOMAIN', ' wp-retina-2x' );
 define( 'WR2X_ENTRY', __FILE__ );

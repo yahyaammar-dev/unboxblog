@@ -69,6 +69,18 @@
 .edit-post-sidebar .mb-block-edit .rwmb-label {
 	margin-bottom: 3px;
 }
+.edit-post-sidebar .mb-block-edit input:not([type="checkbox"]):not([type="radio"]),
+.edit-post-sidebar .rwmb-input-group,
+.edit-post-sidebar .mb-block-edit select,
+.edit-post-sidebar .mb-block-edit .select2-container,
+.edit-post-sidebar .mb-block-edit textarea {
+	width: 100% !important;
+	min-width: auto;
+}
+.edit-post-sidebar .rwmb-column {
+	width: 100%;
+	margin-right: 0;
+}
 
 /* Fetching state */
 .mb-block--fetching {

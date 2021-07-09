@@ -3,7 +3,7 @@
  * Plugin Name: MB Views
  * Plugin URI:  https://metabox.io/plugins/mb-views/
  * Description: Create views for Meta Box fields and content.
- * Version:     1.8.3
+ * Version:     1.9.0
  * Author:      MetaBox.io
  * Author URI:  https://metabox.io
  * License:     GPL2+

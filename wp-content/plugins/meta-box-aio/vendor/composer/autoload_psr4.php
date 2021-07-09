@@ -9,6 +9,8 @@ return array(
     'Riimu\\Kit\\PHPEncoder\\' => array($vendorDir . '/riimu/kit-phpencoder/src'),
     'MetaBox\\Support\\' => array($vendorDir . '/meta-box/support'),
     'MetaBox\\Dependencies\\' => array($vendorDir . '/meta-box/mb-views/dependencies', $vendorDir . '/meta-box/meta-box-builder/dependencies'),
+    'MetaBox\\Columns\\' => array($vendorDir . '/meta-box/meta-box-columns/src'),
+    'MetaBox\\ACF\\' => array($vendorDir . '/meta-box/mb-acf-migration/src'),
     'MBViews\\' => array($vendorDir . '/meta-box/mb-views/src'),
     'MBUP\\' => array($vendorDir . '/meta-box/mb-user-profile/src'),
     'MBUM\\' => array($vendorDir . '/meta-box/mb-user-meta/src'),

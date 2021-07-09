@@ -1,7 +1,7 @@
 <?php
 namespace MBViews;
 
-define( 'MBV_VER', '1.8.3' );
+define( 'MBV_VER', '1.9.0' );
 define( 'MBV_DIR', __DIR__ );
 list( , $url ) = \RWMB_Loader::get_path( __DIR__ );
 define( 'MBV_URL', $url );
@@ -20,6 +20,7 @@ if ( is_admin() ) {
 	new Editor( $location );
 	new ConditionalLogic;
 	new AdminColumns;
+	new Category;
 } else {
 	$meta_box_renderer = new Renderer\MetaBox;
 	$renderer = new Renderer( $meta_box_renderer );

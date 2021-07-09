@@ -85,6 +85,10 @@ class Shortcode {
 
 		$config['post_id'] = $form->process();
 
+		if ( $this->is_ajax() && ( null === $config['post_id'] ) ) {
+			$this->send_error_message( Error::get() );
+		}
+
 		$meta_box_ids = array_filter( explode( ',', $config['id'] . ',' ) );
 		$meta_box_ids = implode( ',', $meta_box_ids );
 

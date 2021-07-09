@@ -9,7 +9,7 @@ trait Post {
 	private function get_option_groups() {
 		$groups = [];
 
-		$fields = $this->get_fields_by_object_type( 'post' );
+		$fields = rwmb_get_registry( 'field' )->get_by_object_type( 'post' );
 		$fields = array_diff_key( $fields, array_flip( ['mb-post-type', 'mb-taxonomy'] ) );
 
 		foreach ( $fields as $post_type => $list ) {
@@ -17,7 +17,9 @@ trait Post {
 			if ( ! $post_type_object ) {
 				continue;
 			}
-			$options = [];
+			$options = [
+				'' => __( '-- Select a field --', 'mb-elementor-integrator' ),
+			];
 			foreach ( $list as $field ) {
 				$options[ "{$post_type}:{$field['id']}" ] = $field['name'] ?: $field['id'];
 			}
@@ -32,6 +34,9 @@ trait Post {
 
 	private function handle_get_value() {
 		$key = $this->get_settings( 'key' );
+		if ( ! $key ) {
+			return null;
+		}
 		if ( false === strpos( $key, ':' ) ) {
 			return rwmb_meta( $key );
 		}
@@ -41,6 +46,9 @@ trait Post {
 
 	private function the_value() {
 		$key = $this->get_settings( 'key' );
+		if ( ! $key ) {
+			return null;
+		}
 		if ( false === strpos( $key, ':' ) ) {
 			return rwmb_meta( $key );
 		}

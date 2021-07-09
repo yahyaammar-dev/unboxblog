@@ -120,7 +120,7 @@ class Output {
     public function set_public_options(array $public_options = [])
     {
         $this->public_options = Helper::merge_array_r(
-            $this->public_options,
+            Settings::get('widget_options'),
             $public_options
         );
     }
@@ -132,7 +132,7 @@ class Output {
      */
     public function output()
     {
-        echo $this->output;
+        echo $this->get_output();
     }
 
     /**
@@ -143,6 +143,7 @@ class Output {
      */
     public function get_output()
     {
+        $this->output = "\n" . ( WP_DEBUG ? '<!-- WordPress Popular Posts v' . WPP_VERSION . ( $this->admin_options['tools']['cache']['active'] ? ' - cached' : '' ) . ' -->' : '' ) . "\n" . $this->output;
         return $this->output;
     }
 
@@ -156,13 +157,26 @@ class Output {
         // Got some posts, format 'em!
         if ( ! empty($this->data) ) {
 
-            $this->output = "\n" . ( WP_DEBUG ? '<!-- WordPress Popular Posts v' . WPP_VERSION . ( $this->admin_options['tools']['cache']['active'] ? ' - cached' : '' ) . ' -->' : '' ) . "\n";
+            $this->output = '';
 
             // Allow WP themers / coders access to raw data
             // so they can build their own output
             if ( has_filter('wpp_custom_html') ) {
                 $this->output .= apply_filters('wpp_custom_html', $this->data, $this->public_options);
                 return;
+            }
+
+            // Has user set a title?
+            if (
+                '' != $this->public_options['title']
+                && '' != $this->public_options['markup']['title-start']
+                && '' != $this->public_options['markup']['title-end']
+            ) {
+                $id_base = isset($this->public_options['id_base']) ? $this->public_options['id_base'] : null;
+                $this->public_options['title'] = apply_filters('widget_title', $this->public_options['title'], $this->public_options, $id_base);
+                $this->public_options['title'] = htmlspecialchars_decode($this->public_options['markup']['title-start'], ENT_QUOTES) . $this->public_options['title'] . htmlspecialchars_decode($this->public_options['markup']['title-end'], ENT_QUOTES);
+
+                $this->output .= $this->public_options['title'] . "\n";
             }
 
             if (
@@ -776,7 +790,7 @@ class Output {
         }
 
         // taxonomy
-        if ( $this->public_options['stats_tag']['category'] && $post_tax != '' ) {
+        if ( ($this->public_options['stats_tag']['category'] || $this->public_options['stats_tag']['taxonomy']['active']) && $post_tax != '' ) {
             $stats['taxonomy'] = '<span class="wpp-category">' . sprintf(__('under %s', 'wordpress-popular-posts'), $post_tax) . '</span>';
         }
 

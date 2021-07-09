@@ -1,7 +1,7 @@
 <?php
 namespace MBB;
 
-use MBB\Helpers\Arr;
+use MetaBox\Support\Arr;
 
 class Register {
 	private $meta_box_post_ids = [];
@@ -82,7 +82,7 @@ class Register {
 
 		// Get full custom table settings from JavaScript data.
 		$settings = get_post_meta( $post_id, 'settings', true );
-		if ( ! Helpers\Arr::get( $settings, 'custom_table.create' ) ) {
+		if ( ! Arr::get( $settings, 'custom_table.create' ) ) {
 			return;
 		}
 		$columns = [];
