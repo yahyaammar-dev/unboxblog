@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,qBAAqB,CAAC;EAClB,QAAQ,EAAE,IAAI;EACd,SAAS,EAAE,UAAU;EACrB,UAAU,EAAE,KAAK;EACjB,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "../../../plugins/redux-framework/redux-core/inc/extensions/options_object/options_object/redux-options-object.scss"
+    ],
+    "names": [],
+    "file": "redux-options-object.css"
+}

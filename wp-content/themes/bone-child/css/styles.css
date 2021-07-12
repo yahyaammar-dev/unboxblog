@@ -1,3 +1,59 @@
+/*Footer Styles*/
+@media (max-width: 400px) {
+  .widget_nav_menu > .widget-title {
+    padding: 0;
+  }
+  .menu-footer-menu-container ul {
+    padding: 0;
+  }
+  .menu-travellers-container {
+    padding: 0;
+  }
+  .siteFooter-widgetArea--3 {
+    display: none;
+  }
+  .siteFooter-widgetArea--3 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .siteFooter-widgetArea--1 {
+    max-width: 50%;
+  }
+  .siteFooter-widgetArea--2 {
+    max-width: 50%;
+  }
+  .siteFooter-middle-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .siteFooter-widgetArea--4 {
+    display: none;
+  }
+  .siteFooter-middle-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 625px) {
+  .siteFooter-widgetArea--4 {
+    display: none;
+  }
+  .siteFooter-middle-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .postRibbon {
   display: none;
 }
@@ -96,50 +152,5 @@ div#ez-toc-container ul li {
 
 .widget-title {
   font-weight: bold;
-}
-
-/*Footer Styles*/
-@media (max-width: 400px) {
-  .widget_nav_menu > .widget-title {
-    padding: 0;
-  }
-  .menu-footer-menu-container ul {
-    padding: 0;
-  }
-  .menu-travellers-container {
-    padding: 0;
-  }
-  .siteFooter-widgetArea--3 {
-    display: none;
-  }
-  .siteFooter-widgetArea--3 {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  .siteFooter-widgetArea--1 {
-    max-width: 50%;
-  }
-  .siteFooter-widgetArea--2 {
-    max-width: 50%;
-  }
-  .siteFooter-middle-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 768px) {
-  .siteFooter-widgetArea--4 {
-    display: none;
-  }
-  .siteFooter-middle-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 /*# sourceMappingURL=styles.css.map */
