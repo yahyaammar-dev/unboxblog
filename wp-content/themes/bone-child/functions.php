@@ -6,6 +6,7 @@ function bone_child_theme_enqueue_scripts() {
     wp_enqueue_script('md-bone-child-scripts', get_stylesheet_directory_uri() . '/js/bone-child-scripts.js', array('jquery'), $current_theme->get( 'Version' ), true);
     //sass styles
     wp_enqueue_style( 'md-bone-child-sass-style', get_stylesheet_directory_uri() . '/css/styles.css', '', $current_theme->get( 'Version' ));
+    wp_enqueue_script( 'md-bone-child-list-map-script', get_stylesheet_directory_uri() . '/js/map-list-slider.js', '', $current_theme->get( 'Version' ));
 }
 add_action( 'wp_enqueue_scripts', 'bone_child_theme_enqueue_scripts', 999 );
 
