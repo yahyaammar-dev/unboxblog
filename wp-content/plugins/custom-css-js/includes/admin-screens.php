@@ -97,13 +97,13 @@ class CustomCSSandJS_Admin {
 		remove_submenu_page( $menu_slug, $submenu_slug );
 
 		$title = __( 'Add Custom CSS', 'custom-css-js' );
-		add_submenu_page( $menu_slug, $title, $title, 'publish_custom_csss', $submenu_slug . '&language=css' );
+		add_submenu_page( $menu_slug, $title, $title, 'publish_custom_csss', $submenu_slug . '&#038;language=css' );
 
 		$title = __( 'Add Custom JS', 'custom-css-js' );
-		add_submenu_page( $menu_slug, $title, $title, 'publish_custom_csss', $submenu_slug . '&language=js' );
+		add_submenu_page( $menu_slug, $title, $title, 'publish_custom_csss', $submenu_slug . '&#038;language=js' );
 
 		$title = __( 'Add Custom HTML', 'custom-css-js' );
-		add_submenu_page( $menu_slug, $title, $title, 'publish_custom_csss', $submenu_slug . '&language=html' );
+		add_submenu_page( $menu_slug, $title, $title, 'publish_custom_csss', $submenu_slug . '&#038;language=html' );
 
 	}
 
@@ -152,6 +152,8 @@ class CustomCSSandJS_Admin {
 			$cma = $cm . '/addon/';
 			wp_enqueue_script( 'ccj-closebrackets', $cma . 'edit/closebrackets.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'ccj-matchbrackets', $cma . 'edit/matchbrackets.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_script( 'ccj-xmlfold', $cma . 'fold/xml-fold.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_script( 'ccj-matchtags', $cma . 'edit/matchtags.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'cm-dialog', $cma . 'dialog/dialog.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'cm-search', $cma . 'search/search.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'cm-searchcursor', $cma . 'search/searchcursor.js', array( 'ccj-codemirror' ), $v, false );
@@ -160,6 +162,7 @@ class CustomCSSandJS_Admin {
 			wp_enqueue_style( 'cm-dialog', $cma . 'dialog/dialog.css', array(), $v );
 			wp_enqueue_script( 'ccj-formatting', $cm . '/lib/util/formatting.js', array( 'ccj-codemirror' ), $v, false );
 			wp_enqueue_script( 'ccj-comment', $cma . 'comment/comment.js', array( 'ccj-codemirror' ), $v, false );
+			wp_enqueue_script( 'ccj-active-line', $cma . 'selection/active-line.js', array( 'ccj-codemirror' ), $v, false );
 
 			// Hint Addons
 			wp_enqueue_script( 'ccj-hint', $cma . 'hint/show-hint.js', array( 'ccj-codemirror' ), $v, false );
@@ -183,6 +186,7 @@ class CustomCSSandJS_Admin {
 					&& strstr( $_value->src, 'plugins/advanced-custom-fields/' ) === false
 					&& strstr( $_value->src, 'plugins/wp-jquery-update-test/' ) === false
 					&& strstr( $_value->src, 'plugins/enable-jquery-migrate-helper/' ) === false
+					&& strstr( $_value->src, 'plugins/tablepress/' ) === false
 					&& strstr( $_value->src, 'plugins/advanced-custom-fields-pro/' ) === false ) {
 						unset( $wp_scripts->registered[ $_key ] );
 					}
@@ -897,11 +901,11 @@ End of comment */ ',
 				'default' => 'header',
 				'values'  => array(
 					'header' => array(
-						'title'    => __( 'Header', 'custom-css-js' ),
+						'title'    => __( 'In the <head> element', 'custom-css-js' ),
 						'dashicon' => 'arrow-up-alt2',
 					),
 					'footer' => array(
-						'title'    => __( 'Footer', 'custom-css-js' ),
+						'title'    => __( 'In the <footer> element', 'custom-css-js' ),
 						'dashicon' => 'arrow-down-alt2',
 					),
 				),
@@ -1432,8 +1436,12 @@ endif;
 			$post    = $filename;
 			$slug    = get_post_meta( $post->ID, '_slug', true );
 			$options = get_post_meta( $post->ID, 'options', true );
+
 			if ( isset( $options['language'] ) ) {
 				$filetype = $options['language'];
+			}
+			if ( $filetype === 'html' ) {
+				return;
 			}
 			if ( ! @file_exists( CCJ_UPLOAD_DIR . '/' . $slug . '.' . $filetype ) ) {
 				$slug = false;
@@ -1530,7 +1538,7 @@ endif;
 		}
 
 		$options             = get_post_meta( $postid, 'options', true );
-		$options['language'] = strtolower( $options['language'] );
+		$options['language'] = ( isset( $options['language'] ) ) ? strtolower( $options['language'] ) : 'css';
 		$options['language'] = in_array( $options['language'], array( 'html', 'js', 'css' ), true ) ? $options['language'] : 'css';
 
 		$slug = get_post_meta( $postid, '_slug', true );

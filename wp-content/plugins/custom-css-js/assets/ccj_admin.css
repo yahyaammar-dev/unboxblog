@@ -402,3 +402,9 @@ height: 3px;
 pre.CodeMirror-line {
     direction: ltr;
 }
+.post-type-custom-css-js .metabox-prefs {
+	display: none;
+}
+.post-type-custom-css-js #url-rules[style], .post-type-custom-css-js #revisionsdiv[style], .post-type-custom-css-js #previewdiv[style], .post-type-custom-css-js #custom-code-options[style] {
+	display: block !important;
+}

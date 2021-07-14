@@ -17,6 +17,7 @@ jQuery(document).ready( function($) {
             mode: content_mode,
             matchBrackets: true,
             autoCloseBrackets: true,
+            styleActiveLine: true,
             extraKeys: {
                 "F11": function(cm) {
                     cm.setOption("fullScreen", !cm.getOption("fullScreen"));
@@ -32,6 +33,7 @@ jQuery(document).ready( function($) {
                 "Cmd-F": "findPersistent",
                 "Ctrl-/": "toggleComment",
                 "Cmd-/": "toggleComment",
+                "Ctrl-J": "toMatchingTag",
             },
         };
 

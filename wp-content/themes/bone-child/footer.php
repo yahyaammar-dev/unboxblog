@@ -22,7 +22,7 @@
 			</div>
 			<?php } ?>
 
-			<?php if(is_active_sidebar('footer-sidebar-1') || is_active_sidebar('footer-sidebar-2') || is_active_sidebar('footer-sidebar-3')) { ?>
+			<!-- <?php if(is_active_sidebar('footer-sidebar-1') || is_active_sidebar('footer-sidebar-2') || is_active_sidebar('footer-sidebar-3')) { ?>
 			<div class="siteFooter-middle">
 				<div class="container">
 					<div class="siteFooter-middle-inner clearfix">
@@ -51,7 +51,7 @@
 					</div>
 				</div>
 			</div>
-			<?php } ?>
+			<?php } ?> -->
 			
 			<div class="siteFooter-bottom">
 				<div class="container">

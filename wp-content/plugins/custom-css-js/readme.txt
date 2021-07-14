@@ -4,8 +4,8 @@ Contributors: diana_burduja
 Email: diana@burduja.eu
 Tags: CSS, JS, javascript, custom CSS, custom JS, custom style, site css, add style, customize theme, custom code, external css, css3, style, styles, stylesheet, theme, editor, design, admin
 Requires at least: 3.0.1
-Tested up to: 5.7 
-Stable tag: 3.36
+Tested up to: 5.8 
+Stable tag: 3.37
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Requires PHP: 5.2.4
@@ -104,6 +104,12 @@ The URL for the linked Codes is built just like the URL for other media (from Me
 $. Add/Edit HTML 
 
 == Changelog ==
+
+= 3.37 =
+* 07/12/2021
+* Fix: allow the TablePress plugin to load its JS files on the "Add custom code" page in admin
+* Feature: highlight active line in the editor 
+* Feature: add "Ctrl + J" shortcut to the editor for jumping to the matching tag
 
 = 3.36 =
 * 02/23/2021

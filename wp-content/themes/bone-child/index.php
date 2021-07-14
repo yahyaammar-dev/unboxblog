@@ -25,6 +25,12 @@ $latest_post_ids = array();
             </div>
         <?php } ?>
 
+        <?php if ( is_home() && !is_paged() ) { ?>
+            <div class="listMaps">
+                <?php get_template_part('templates/home','gallery'); ?>
+            </div>
+        <?php } ?>
+
         <?php if (is_active_sidebar('adsidebar-1')) { ?>
             <div class="adSidebar adSidebar--1">
                 <div class="container">
@@ -108,6 +114,11 @@ $latest_post_ids = array();
         <?php } ?>
 
     </main>
+
+
+
+
+
 
 <?php if (is_active_sidebar('adsidebar-2')) { ?>
     <div class="adSidebar adSidebar--2">
