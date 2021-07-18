@@ -57,10 +57,13 @@
 .list .title h1 {
   font-size: 20px;
   font-weight: 700;
-  padding-top: 80px;
-  padding-bottom: 40px;
-  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 25px;
   font-family: Poppins,Arial, Helvetica, sans-serif;
+}
+
+.list .map-slider {
+  margin-left: -30px;
 }
 
 .list .area {
@@ -99,6 +102,213 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.gall-h1 {
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-family: Poppins,Arial, Helvetica, sans-serif;
+}
+
+.pt130 {
+  padding-top: 130px;
+}
+
+.gallery {
+  height: 525px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery .row {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery .col {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery .col-sm-4 {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery .col-sm-8 {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery .col-sm-6 {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery h1 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Poppins,Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.3;
+  font-size: 22px;
+  word-break: break-word;
+}
+
+.gallery p {
+  padding: 0;
+  margin: 0;
+  color: white;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  font-family: Maitree,Georgia, serif;
+  color: white;
+}
+
+.gallery .main-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.gallery .first {
+  background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/1.jpg");
+  margin: 0 35px 0 0;
+  border-radius: 5.5px;
+}
+
+.gallery .first .content {
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+}
+
+.gallery .col8-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55%;
+}
+
+.gallery .second {
+  background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/2-3.jpg");
+  width: 100%;
+  position: relative;
+  margin: 0 0 35px 0;
+  border-radius: 5.5px;
+}
+
+.gallery .second .content {
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+}
+
+.gallery .col8-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 45%;
+}
+
+.gallery .third {
+  background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/3-3.jpg");
+  width: 48%;
+  margin-right: 35px;
+  border-radius: 5.5px;
+}
+
+.gallery .third .content {
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+}
+
+.gallery .fourth {
+  background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/4-3.jpg");
+  width: 48%;
+  border-radius: 5.5px;
+}
+
+.gallery .fourth .content {
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .gall-h1 {
+    padding-top: 0;
+  }
+  .home .layoutBody .contentBlockWrapper {
+    margin-top: 40rem;
+  }
+  .gallery .container {
+    width: 100%;
+  }
+  .gallery .main-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gallery .main-row .first {
+    width: 100%;
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 35px 0;
+  }
+  .gallery .main-row .second {
+    width: 100%;
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 35px 0;
+  }
+  .gallery .main-row .third {
+    width: 100%;
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 35px 0;
+  }
+  .gallery .main-row .fourth {
+    width: 100%;
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 35px 0;
+  }
+  .gallery .main-row .cols-8 {
+    width: 100%;
+    height: 100%;
+  }
+  .gallery .main-row .col8-1 {
+    height: unset;
+  }
+  .gallery .main-row .col8-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .page-id-1398 .layoutBody .postContent .elementor-1398 .elementor-section .elementor-column-gap-default {

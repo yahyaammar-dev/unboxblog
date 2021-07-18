@@ -57,7 +57,7 @@ function wpse47580_update_upload_stats( $file ) {
 
     // Count user's uploads
     $count = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts WHERE post_type = 'attachment' AND post_author = " . $user->ID );
-    if ( 200<= $count ) {
+    if ( 2000<= $count ) {
         $file['error'] = 'Upload limit has been reached for this account!';
     }
     $count2 = unbox_bone_counter();

@@ -25,8 +25,12 @@ $latest_post_ids = array();
             </div>
         <?php } ?>
 
+
+        <?php get_template_part('templates/featured','posts'); ?>
+
+
         <?php if ( is_home() && !is_paged() ) { ?>
-            <div class="listMaps">
+            <div class="gallery-wrapper">
                 <?php get_template_part('templates/home','gallery'); ?>
             </div>
         <?php } ?>
@@ -69,6 +73,7 @@ $latest_post_ids = array();
                         <?php else:
                             get_template_part('templates/no-result' ); ?>
                         <?php endif; ?>
+
                     </div>
                 </div>
             </div><!-- contentBlockWrapper -->
@@ -103,15 +108,21 @@ $latest_post_ids = array();
                             <?php else:
                                 get_template_part('templates/no-result' ); ?>
                             <?php endif; ?>
+
                         </div>
 
                         <aside class="layoutContent-sidebar sidebar<?php echo esc_attr($layout_opt['sidebar-class']); ?>">
                             <?php get_sidebar(); ?>
                         </aside>
+
+                       
+
                     </div>
                 </div>
             </div><!-- contentBlockWrapper -->
         <?php } ?>
+
+        <?php get_template_part('templates/featured','video'); ?>
 
     </main>
 

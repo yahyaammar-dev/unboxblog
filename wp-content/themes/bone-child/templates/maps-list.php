@@ -17,51 +17,50 @@
                             <p class="text">Afghanistan</p>
                         </div>
                     </a>
-                <a href="#">
-                    <div class="area  carousel-item slider-img">
-                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/pak.png">
-                        <p class="text">Pakistan</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="area carousel-item slider-img">
-                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/bosnia.png">
-                        <p class="text">Bosnia</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="area carousel-item slider-img">
-                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/afgh.png">
-                        <p class="text">Afghanistan</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="area carousel-item slider-img">
-                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/bosnia.png">
-                        <p class="text">Bosnia</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="area carousel-item slider-img">
-                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/nigeria.png">
-                        <p class="text">Nigeria</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="area  carousel-item slider-img">
-                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/arrow.pngg" class="arrow">
-                        <p class="text">Explore<br>More</p>
-                    </div>
-                </a>
+                    <a href="#">
+                        <div class="area  carousel-item slider-img">
+                            <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/pak.png">
+                            <p class="text">Pakistan</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="area carousel-item slider-img">
+                            <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/bosnia.png">
+                            <p class="text">Bosnia</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="area carousel-item slider-img">
+                            <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/afgh.png">
+                            <p class="text">Afghanistan</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="area carousel-item slider-img">
+                            <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/bosnia.png">
+                            <p class="text">Bosnia</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="area carousel-item slider-img">
+                            <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/nigeria.png">
+                            <p class="text">Nigeria</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="area  carousel-item slider-img">
+                            <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/arrow.png"
+                                class="arrow">
+                            <p class="text">Explore<br>More</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
+
     </div>
-
-</div>
 </div>
 
-
-</div>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -88,7 +87,4 @@ $('.owl-carousel-map').owlCarousel({
         }
     }
 })
-
-
-
 </script>
