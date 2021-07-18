@@ -13,43 +13,43 @@
                 <div class="owl-carousel owl-carousel-map">
                     <a href="#">
                         <div class="area   carousel-item slider-img">
-                            <img src="../unboxblog/wp-content/themes/bone-child/images/afgh.png">
+                            <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/afgh.png">
                             <p class="text">Afghanistan</p>
                         </div>
                     </a>
                 <a href="#">
                     <div class="area  carousel-item slider-img">
-                        <img src="../unboxblog/wp-content/themes/bone-child/images/pak.png">
+                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/pak.png">
                         <p class="text">Pakistan</p>
                     </div>
                 </a>
                 <a href="#">
                     <div class="area carousel-item slider-img">
-                        <img src="../unboxblog/wp-content/themes/bone-child/images/bosnia.png">
+                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/bosnia.png">
                         <p class="text">Bosnia</p>
                     </div>
                 </a>
                 <a href="#">
                     <div class="area carousel-item slider-img">
-                        <img src="../unboxblog/wp-content/themes/bone-child/images/afgh.png">
+                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/afgh.png">
                         <p class="text">Afghanistan</p>
                     </div>
                 </a>
                 <a href="#">
                     <div class="area carousel-item slider-img">
-                        <img src="../unboxblog/wp-content/themes/bone-child/images/bosnia.png">
+                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/bosnia.png">
                         <p class="text">Bosnia</p>
                     </div>
                 </a>
                 <a href="#">
                     <div class="area carousel-item slider-img">
-                        <img src="../unboxblog/wp-content/themes/bone-child/images/pak.png">
-                        <p class="text">Pakistan</p>
+                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/nigeria.png">
+                        <p class="text">Nigeria</p>
                     </div>
                 </a>
                 <a href="#">
                     <div class="area  carousel-item slider-img">
-                        <img src="../unboxblog/wp-content/themes/bone-child/images/arrow.png" class="arrow">
+                        <img src="http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/arrow.pngg" class="arrow">
                         <p class="text">Explore<br>More</p>
                     </div>
                 </a>
