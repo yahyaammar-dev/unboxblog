@@ -116,6 +116,12 @@
   padding-top: 130px;
 }
 
+@media screen and (max-width: 768px) {
+  .pt130 {
+    margin-top: 90px;
+  }
+}
+
 .gallery {
   height: 525px;
   display: -webkit-box;
@@ -183,7 +189,7 @@
 .gallery .first {
   background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/1.jpg");
   margin: 0 35px 0 0;
-  border-radius: 5.5px;
+  border-radius: 5px;
 }
 
 .gallery .first .content {
@@ -204,7 +210,7 @@
   width: 100%;
   position: relative;
   margin: 0 0 35px 0;
-  border-radius: 5.5px;
+  border-radius: 5px;
 }
 
 .gallery .second .content {
@@ -224,7 +230,7 @@
   background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/3-3.jpg");
   width: 48%;
   margin-right: 35px;
-  border-radius: 5.5px;
+  border-radius: 5px;
 }
 
 .gallery .third .content {
@@ -236,7 +242,7 @@
 .gallery .fourth {
   background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/4-3.jpg");
   width: 48%;
-  border-radius: 5.5px;
+  border-radius: 5px;
 }
 
 .gallery .fourth .content {
@@ -319,6 +325,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .second-col {
+    padding-top: 15px;
+  }
 }
 
 .postRibbon {
@@ -419,5 +431,30 @@ div#ez-toc-container ul li {
 
 .widget-title {
   font-weight: bold;
+}
+
+.contentBlockWrapper {
+  padding-top: 70px;
+}
+
+.video-container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.plyr__video-embed iframe {
+  height: 150px !important;
+}
+
+.plyr__video-wrapper--fixed-ratio video {
+  height: 150px !important;
+}
+
+.plyr__video-wrapper--fixed-ratio {
+  max-width: 150px;
+}
+
+.plyr__video-embed {
+  max-width: 150px;
 }
 /*# sourceMappingURL=styles.css.map */

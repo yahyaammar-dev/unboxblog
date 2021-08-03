@@ -2,6 +2,7 @@
 @import 'mapList';
 @import 'gallery';
 @import 'elementor';
+@import 'featuredPosts';
 
 
 .postRibbon{
@@ -87,4 +88,38 @@ div#ez-toc-container ul li {
 }
 .widget-title{
   font-weight: bold;
+}
+
+
+
+.contentBlockWrapper{
+        padding-top: 70px;
+}
+
+
+
+.video-container{
+  max-width: 100%;
+  padding: 0;
+}
+
+
+
+.plyr__video-embed iframe{
+  height: 150px !important;
+} 
+
+
+
+.plyr__video-wrapper--fixed-ratio video {
+  height: 150px !important;
+}
+
+
+.plyr__video-wrapper--fixed-ratio {
+  max-width: 150px;
+}
+
+.plyr__video-embed{
+  max-width: 150px;
 }

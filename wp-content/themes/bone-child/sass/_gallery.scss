@@ -9,6 +9,12 @@
     padding-top: 130px;
 }
 
+@media screen and (max-width: 768px){
+    .pt130{
+        margin-top: 90px;
+    }
+}
+
 .gallery{
     height: 525px;
     display: flex;
@@ -63,7 +69,7 @@
     .first{
         background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/1.jpg");
         margin: 0 35px 0 0;
-        border-radius: 5.5px;
+        border-radius: 5px;
         
         .content {
             padding: 30px;
@@ -80,7 +86,7 @@
         width: 100%;
         position: relative;
         margin: 0 0 35px 0;
-        border-radius: 5.5px;
+        border-radius: 5px;
         
         .content{
             padding: 30px;
@@ -96,7 +102,7 @@
         background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/3-3.jpg");
         width: 48%;
         margin-right: 35px;
-        border-radius: 5.5px;
+        border-radius: 5px;
         
         .content{
             padding: 30px;
@@ -107,7 +113,7 @@
     .fourth{
         background: url("http://dev-1.unboxingpakistan.com/wp-content/uploads/2021/07/4-3.jpg");
         width: 48%;
-        border-radius: 5.5px;
+        border-radius: 5px;
         
         .content{
             padding: 30px;

@@ -51,7 +51,7 @@
             </article>
         </div>
 
-        <div class="tile-item col-xs-12 col-sm-6">
+        <div class="tile-item col-xs-12 col-sm-6 second-col">
             <article
                 class="postItem post--tile u-hasBackgroundImg post-1385 post type-post status-publish format-standard has-post-thumbnail category-travel tag-dinner tag-envato tag-experience"
                 style="background-image: url(http://localhost/unboxblog/wp-content/uploads/2021/03/matt-alaniz-235880-unsplash.jpg);">
