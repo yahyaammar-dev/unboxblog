@@ -23,10 +23,10 @@
 define( 'DB_NAME', 'unboxin8_local2' );
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'unboxin8_localdb2user' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'unboxing123A' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );

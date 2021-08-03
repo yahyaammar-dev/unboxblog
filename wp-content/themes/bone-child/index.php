@@ -1,4 +1,5 @@
 <?php
+
 $layout_opt = md_bone_get_layout_opt();
 $feat_layout = md_bone_get_option('feat-layout','slider');
 $section_heading = md_bone_get_option('content-heading-text','');
